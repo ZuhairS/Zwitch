@@ -17,7 +17,7 @@ Zwitch is a web application inspired by Twitch built using Ruby on Rails and Rea
 - [ ] Production README
 
 ## Design Docs
-- [View Wireframes](./wireframes)
+- [View Wireframes](./wireframes.md)
 - [React Components](./component-hierarchy.md)
 - [API Endpoints](./api-endpoints.md)
 - [DB Schema](./schema.md)
