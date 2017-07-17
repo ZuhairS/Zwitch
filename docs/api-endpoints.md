@@ -8,17 +8,23 @@
 ## JSON API
 | Controller | Method   | URL            | Notes |
 | ---------- | -------- | -------------- | ----- |
-| Users   | 'GET'    | '/api/users' | Index |
 | Users      | 'POST'   | '/api/users/'  | New User|
-| Users      | 'PATCH'  | '/api/users/:id'  | Update User|
-| Users      | 'DELETE'  | '/api/users/:id'  | Delete User|
 | - | - | - | - |
 | Session    | 'POST'   | '/api/session' | Login |
 | Session    | 'DELETE' | '/api/session' | Logout |
 | - | - | - | - |
-| Follows    | 'POST' | '/api/follows' | New Follow|
-| Follows    | 'GET' | '/api/follows/:id' | Show Follow|
-| Follows    | 'DELETE' | '/api/follows/:id' | Delete Follow|
+| Channels   | 'GET'    | '/api/channels' | Index |
+| Channels   | 'POST'   | '/api/channels/'  | New Channel|
+| Channels   | 'GET'   | '/api/channels/:id'  | Show Channel|
+| Channels   | 'PATCH'   | '/api/channels/:id'  | Update Channel|
 | - | - | - | - |
-| Chats    | 'POST' | '/api/chats' | New Chat|
-| Chats    | 'GET' | '/api/chats/:id' | Get All Chat Messages For a Chat|
+| Follows    | 'GET' | '/api/follows' | Index|
+| Follows    | 'POST' | '/api/follows' | Follow|
+| Follows    | 'GET' | '/api/follows/:id' | Show Follow|
+| Follows    | 'DELETE' | '/api/follows/:id' | UnFollow|
+| - | - | - | - |
+| Chatrooms    | 'POST' | '/api/chatrooms' | New Chatroom|
+| Chatrooms    | 'GET' | '/api/chatrooms/:id' | Show Chatroom|
+| - | - | - | - |
+| ChatMessages    | 'POST' | '/api/chat_messages' | New chat message|
+| ChatMessages    | 'GET' | '/api/chat_messages/:id' | Show Chat message|
