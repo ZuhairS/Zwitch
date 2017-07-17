@@ -1,25 +1,25 @@
-![auth](./wireframes/Auth.png)
+![](./wireframes/Auth.png)
 
-![home-new](./wireframes/Home Page - New User.png)
+![](./wireframes/Home Page - New User.png)
 
-![home-logged](./wireframes/Home Page - Logged In.png)
+![](./wireframes/Home Page - Logged In.png)
 
-![channel-list](./wireframes/Browse Channel List.png)
+![](./wireframes/Browse Channel List.png)
 
-![sidebar-open](./wireframes/Sidebar - Open.png)
+![](./wireframes/Sidebar - Open.png)
 
-![sidebar-closed](./wireframes/Sidebar - Closed.png)
+![](./wireframes/Sidebar - Closed.png)
 
-![channel-streaming](./wireframes/Channel Page - Streaming.png)
+![](./wireframes/Channel Page - Streaming.png)
 
-![channel-no-stream](./wireframes/Channel Page - Not Streaming.png)
+![](./wireframes/Channel Page - Not Streaming.png)
 
-![chat-open](./wireframes/Channel Page - Chat - Open.png)
+![](./wireframes/Channel Page - Chat - Open.png)
 
-![chat-closed](./wireframes/Channel Page - Chat – Closed.png)
+![](./wireframes/Channel Page - Chat – Closed.png)
 
-![own-channel](./wireframes/Own Channel Page - Default page.png)
+![](./wireframes/Own Channel Page - Default page.png)
 
-![channel-form](./wireframes/Customize Channel Form.png)
+![](./wireframes/Customize Channel Form.png)
 
-![own-channel-video](./wireframes/Own Channel Page - With video added.png)
+![](./wireframes/Own Channel Page - With video added.png)
