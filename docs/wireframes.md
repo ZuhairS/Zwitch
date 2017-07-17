@@ -1,25 +1,64 @@
-![alt text](./wireframes/Auth.png)
+##### Auth
+<kbd>
+  <img src="./wireframes/Auth.png" />
+</kbd>
 
-![alt text](./wireframes/Home Page - New User.png)
+##### Home Page - New User
+<kbd>
+  <img src="./wireframes/Home Page - New User.png" />
+</kbd>
 
-![alt text](./wireframes/Home Page - Logged In.png)
+##### Home Page - Logged In
+<kbd>
+  <img src="./wireframes/Home Page - Logged In.png" />
+</kbd>
 
-![alt text](./wireframes/Browse Channel List.png)
+##### Browse Channel List
+<kbd>
+  <img src="./wireframes/Browse Channel List.png" />
+</kbd>
 
-![alt text](./wireframes/Sidebar - Open.png)
+##### Follow Sidebar - Opem
+<kbd>
+  <img src="./wireframes/Sidebar - Open.png" />
+</kbd>
 
-![alt text](./wireframes/Sidebar - Closed.png)
+##### Follow Sidebar - Closed
+<kbd>
+  <img src="./wireframes/Sidebar - Closed.png" />
+</kbd>
 
-![alt text](./wireframes/Channel Page - Streaming.png)
+##### Channel Page - Streaming
+<kbd>
+  <img src="./wireframes/Channel Page - Streaming.png" />
+</kbd>
 
-![alt text](./wireframes/Channel Page - Not Streaming.png)
+##### Channel Page - Not Streaming
+<kbd>
+  <img src="./wireframes/Channel Page - Not Streaming.png" />
+</kbd>
 
-![alt text](./wireframes/Channel Page - Chat - Open.png)
+##### Chat Sidebar - Open
+<kbd>
+  <img src="./wireframes/Channel Page - Chat - Open.png" />
+</kbd>
 
-![alt text](./wireframes/Channel Page - Chat – Closed.png)
+##### Chat Sidebar - Closed
+<kbd>
+  <img src="./wireframes/Channel Page - Chat – Closed.png" />
+</kbd>
 
-![alt text](./wireframes/Own Channel Page - Default page.png)
+##### Own Channel Page - Default
+<kbd>
+  <img src="./wireframes/Own Channel Page - Default page.png" />
+</kbd>
 
-![alt text](./wireframes/Customize Channel Form.png)
+##### Own Channel Page - After video added
+<kbd>
+<img src="./wireframes/Own Channel Page - With video added.png" />
+</kbd>
 
-![alt text](./wireframes/Own Channel Page - With video added.png)
+##### Customize Channel Form
+<kbd>
+  <img src="./wireframes/Customize Channel Form.png" />
+</kbd>

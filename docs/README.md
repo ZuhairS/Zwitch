@@ -2,7 +2,7 @@
 
 [Live APP](https://github.com/ZuhairS/Zwitch)
 
-[Trello](https://trello.com)
+[Trello](https://trello.com/b/GYIPbjDY/zwitch)
 
 ## Minimum Viable Product
 
