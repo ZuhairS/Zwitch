@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
-    return user if user && user.is_password(password)
+    return user if user && user.is_password?(password)
     nil
   end
 
@@ -29,7 +29,7 @@ class User < ApplicationRecord
     self.password_digest = BCrypt::Password.create(password)
   end
 
-  def password_is?(password)
+  def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
@@ -47,7 +47,7 @@ class User < ApplicationRecord
   end
 
   def ensure_default_profile_image
-    self.profile_image_url ||= "./assets/images/default_profile_img.png"
+    self.profile_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500402385/default_profile_img_cjcyo2.png"
   end
 
   def ensure_session_token_uniqueness
