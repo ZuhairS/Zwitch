@@ -5,6 +5,7 @@
 |------------ | --------- | ------- |
 |id| integer| not null, primary key|
 |username | string | not null, unique |
+|profile_img_url| string| -|
 |password_digest| string| not null|
 |session_token| string| not null, unique, indexed|
 
@@ -17,7 +18,6 @@
 |video_url| string| -|
 |stream_name| string| not null|
 |stream_desc| string| -|
-|profile_img_url| string| -|
 |banner_img_url| string| -|
 
 ## follows
@@ -32,7 +32,6 @@
 |------------ | --------- | ------- |
 |id| integer| not null, primary key|
 |channel_id| integer| not null, foreign key (references channels), indexed, unique|
-|chat_message_id| integer| not null, foreign key (references chat_messages), indexed|
 
 ## chat_messages
 | column name | data type | details |

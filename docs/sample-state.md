@@ -1,51 +1,50 @@
 ```
 {
-  currentUser: {
-    id: 1,
-    username: "ZPowers",
+  session: {
+    currentUser: {
+      id: 1,
+      username: "ZPowers",
+      profileImgUrl: ""
+    },
+    errors: []
   }
 
   users: {
     1: {
       id: 1,
       username: "ZPowers",
+      profileImgUrl: ""
     },
     2: {
       id: 2,
       username: "mankey",
-    }
-    signUp: {
-      errors: []
-    },
-    logIn: {
-      errors: []
+      profileImgUrl: ""
     }
   }
 
   channels: {
-    1: {
+    allChannels: {
+      1: {
+        id: 1,
+        channelName: "Game Trailers",
+        ownerId: 1,
+        },
+      2: {
+        id: 2,
+        channelName: "mankey's channel",
+        ownerId: 2,
+      }
+    },
+    selectedChannel: {
       id: 1,
       channelName: "Game Trailers",
       ownerId: 1,
       videoUrl: "https://www.youtube.com/watch?v=gOE2BVRCUkM"
       streamName: "God of War E3",
-      streamDesc: "Footage of the new God of War game from E3"
-      profileImgUrl: "",
-      bannerImgUrl: ""
-    },
-    2: {
-      id: 2,
-      channelName: "mankey's channel",
-      ownerId: 2,
-      videoUrl: ""
-      streamName: "mankey's stream",
-      streamDesc: "",
-      profileImgUrl: "",
+      streamDesc: "Footage of the new God of War game from E3",
       bannerImgUrl: ""
     }
-    customizeChannel: {
-      errors: []
-    }
+    customizeErrors: []
   }
 
   follows: {
@@ -59,14 +58,12 @@
   chatrooms: {
     1: {
       id: 1,
-      channelId: 1,
-      chatMessageId: 1
+      channelId: 1
     },
     2: {
       id: 2,
-      channelId: 1,
-      chatMessageId: 2
-    },
+      channelId: 1
+    }
   }
 
   chatMessages: {
@@ -79,8 +76,8 @@
     2: {
       id: 2,
       chatroomId: 1,
-      body: "Big Fan!",
-      userId: 2
+      userId: 2,
+      body: "Big Fan!"
     }
   }
 }

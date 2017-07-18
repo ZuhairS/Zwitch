@@ -26,5 +26,5 @@
 | Chatrooms    | 'POST' | '/api/chatrooms' | New Chatroom|
 | Chatrooms    | 'GET' | '/api/chatrooms/:id' | Show Chatroom|
 | - | - | - | - |
-| ChatMessages    | 'POST' | '/api/chat_messages' | New chat message|
+| ChatMessages    | 'POST' | '/api/chat_messages' | New Chat message|
 | ChatMessages    | 'GET' | '/api/chat_messages/:id' | Show Chat message|
