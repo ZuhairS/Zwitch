@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export default class AuthForm extends React.Component {
+class AuthForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -36,6 +36,12 @@ export default class AuthForm extends React.Component {
     );
   }
 
+  clearErrors() {
+    return event => {
+      this.props.clearErrors();
+    };
+  }
+
   submitType() {
     return this.props.formType === 'login' ? "Login" : "Sign Up";
   }
@@ -50,8 +56,8 @@ export default class AuthForm extends React.Component {
       <div className="auth-form">
 
         <div className="login-signup-selector">
-          <NavLink to="/login"><h3>Log In</h3></NavLink>
-          <NavLink to="/signup"><h3>Sign Up</h3></NavLink>
+          <NavLink onClick={this.clearErrors()} to="/login"><h3>Log In</h3></NavLink>
+          <NavLink onClick={this.clearErrors()} to="/signup"><h3>Sign Up</h3></NavLink>
         </div>
 
         <form onSubmit={this.handleSubmit} className="form-box">
@@ -92,3 +98,5 @@ export default class AuthForm extends React.Component {
 
   }
 }
+
+export default AuthForm;
