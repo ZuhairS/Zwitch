@@ -10,6 +10,8 @@ class AuthForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearErrors = this.clearErrors.bind(this);
+    this.guestLogin = this.guestLogin.bind(this);
   }
 
   update(field) {
@@ -37,23 +39,28 @@ class AuthForm extends React.Component {
   }
 
   clearErrors() {
-    return event => {
+    return () => {
       this.props.clearErrors();
     };
   }
 
   submitType() {
-    return this.props.formType === 'login' ? "Login" : "Sign Up";
+    return this.props.formType === 'login' ? "Log In" : "Sign Up";
   }
 
-  demoLogin(event) {
+  guestLogin(event) {
     event.preventDefault();
+    const guestUser = {
+      username: "Guest",
+      password: "guestpassword"
+    };
+    this.props.guestLogin(guestUser);
   }
 
   render() {
 
     return (
-      <div className="auth-form">
+      <div className="auth-form-container">
 
         <div className="login-signup-selector">
           <NavLink onClick={this.clearErrors()} to="/login"><h3>Log In</h3></NavLink>
@@ -62,13 +69,13 @@ class AuthForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="form-box">
 
-          {this.renderErrors()}
+          <div className="errors">
+            {this.renderErrors()}
+          </div>
 
-          <div className="login-form">
+          <div className="auth-form">
 
-            <br/>
-
-            <label>Username:
+            <label>Username
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -76,22 +83,20 @@ class AuthForm extends React.Component {
                 />
             </label>
 
-            <br/>
-
-            <label>Password:
+            <label>Password
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="form-input"
                 />
             </label>
-
-            <br/>
-
-            <input type="submit" value={this.submitType()} />
-
-            <button onClick={this.demoLogin}>Demo Login</button>
           </div>
+
+            <div className="auth-buttons">
+              <input type="submit" value={this.submitType()} />
+              <button onClick={this.guestLogin}>Guest Login</button>
+            </div>
+
         </form>
       </div>
     );

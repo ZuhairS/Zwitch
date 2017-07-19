@@ -3,22 +3,25 @@ import {
   Route,
   Redirect,
   Switch,
-  Link,
-  HashRouter
+  Link
 } from 'react-router-dom';
 
+import Modal from 'react-modal';
 import { AuthRoute } from '../util/route_util';
 import AuthFormContainer from './auth_form/auth_form_container';
+import NavbarContainer from './navbar/navbar_container';
 
 const App = () => (
-  <div>
-    <header>
-      <h1>Welcome to the awesomeness that will be Zwitch!</h1>
-    </header>
+  <section className="zwitch">
+    <NavbarContainer />
 
-    <AuthRoute path="/login" component={AuthFormContainer} />
-    <AuthRoute path="/signup" component={AuthFormContainer} />
-  </div>
+    <section className="auth-form-modal">
+      <AuthRoute path="/login" component={AuthFormContainer} />
+      <AuthRoute path="/signup" component={AuthFormContainer} />
+    </section>
+
+
+  </section>
 );
 
 export default App;

@@ -13,3 +13,103 @@
  *= require_tree .
  *= require_self
  */
+
+
+ html {
+ 	position: relative;
+ 	height: 100%;
+ }
+
+ .main-nav {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid black;
+ }
+
+ .left-nav {
+   display: flex;
+   justify-content: space-around;
+   /*border: 1px solid black;*/
+   width: 35%;
+   padding: 15px;
+ }
+
+ .right-nav > .login-signup {
+   display: flex;
+   justify-content: space-around;
+   padding: 15px;
+   width: 200px;
+   /*border: 1px solid black;*/
+ }
+
+ .right-nav > .nav-username-logout {
+   display: flex;
+   justify-content: space-around;
+   padding: 15px;
+   width: 200px;
+ }
+
+.auth-form-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.auth-form-container {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 400px;
+  width: 350px;
+  padding: 10px;
+}
+
+.login-signup-selector {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+  height: 40px;
+  padding: 20px;
+}
+
+.errors {
+  height: 35px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: ;
+  justify-content: center;
+  border: 1px solid pink;
+  padding: 40px;
+}
+
+.auth-form input{
+  background-color: white;
+  width: 50%;
+  border: 1px solid grey;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  border: 1px solid violet;
+}
+
+.auth-buttons > input, .auth-buttons > button {
+  padding: 5px;
+}
+
+.active {
+  pointer-events: none;
+  font-weight: bold;
+}
