@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Modal from 'react-modal';
 
 class AuthForm extends React.Component {
 
@@ -12,6 +13,7 @@ class AuthForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearErrors = this.clearErrors.bind(this);
     this.guestLogin = this.guestLogin.bind(this);
+    this.modalIsOpen = this.modalIsOpen.bind(this);
   }
 
   update(field) {
@@ -57,48 +59,60 @@ class AuthForm extends React.Component {
     this.props.guestLogin(guestUser);
   }
 
+  modalIsOpen() {
+    return ["login", "signup"].includes(this.props.formType);
+  }
+
   render() {
 
     return (
-      <div className="auth-form-container">
+      // <Modal isOpen={this.modalIsOpen()}
+      //   contentLabel="Sign Up/Log In Modal">
 
-        <div className="login-signup-selector">
-          <NavLink onClick={this.clearErrors()} to="/login"><h3>Log In</h3></NavLink>
-          <NavLink onClick={this.clearErrors()} to="/signup"><h3>Sign Up</h3></NavLink>
-        </div>
+        <div className="auth-form-container">
 
-        <form onSubmit={this.handleSubmit} className="form-box">
-
-          <div className="errors">
-            {this.renderErrors()}
+          <div className="login-signup-selector">
+            <NavLink onClick={this.clearErrors()} to="/login">
+              <h3>Log In</h3>
+            </NavLink>
+            <NavLink onClick={this.clearErrors()} to="/signup">
+              <h3>Sign Up</h3>
+              </NavLink>
           </div>
 
-          <div className="auth-form">
+          <form onSubmit={this.handleSubmit} className="form-box">
 
-            <label>Username
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="form-input"
-                />
-            </label>
-
-            <label>Password
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="form-input"
-                />
-            </label>
-          </div>
-
-            <div className="auth-buttons">
-              <input type="submit" value={this.submitType()} />
-              <button onClick={this.guestLogin}>Guest Login</button>
+            <div className="errors">
+              {this.renderErrors()}
             </div>
 
-        </form>
-      </div>
+            <div className="auth-form">
+
+              <label>Username
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="form-input"
+                  />
+              </label>
+
+              <label>Password
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="form-input"
+                  />
+              </label>
+            </div>
+
+              <div className="auth-buttons">
+                <input type="submit" value={this.submitType()} />
+                <button onClick={this.guestLogin}>Guest Login</button>
+              </div>
+
+          </form>
+        </div>
+      // </Modal>
     );
 
   }

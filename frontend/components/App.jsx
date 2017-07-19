@@ -6,7 +6,6 @@ import {
   Link
 } from 'react-router-dom';
 
-import Modal from 'react-modal';
 import { AuthRoute } from '../util/route_util';
 import AuthFormContainer from './auth_form/auth_form_container';
 import NavbarContainer from './navbar/navbar_container';
@@ -14,6 +13,7 @@ import NavbarContainer from './navbar/navbar_container';
 const App = () => (
   <section className="zwitch">
     <NavbarContainer />
+
 
     <section className="auth-form-modal">
       <AuthRoute path="/login" component={AuthFormContainer} />
