@@ -88,21 +88,21 @@ class AuthForm extends React.Component {
 
             <div className="auth-form">
 
-              <label>Username
-                <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className="form-input"
-                  />
-              </label>
+              <label htmlFor="username-box">Username</label>
+              <input type="text"
+                id="username-box"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="form-input"
+                />
 
-              <label>Password
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="form-input"
-                  />
-              </label>
+              <label htmlFor="password-box">Password</label>
+              <input type="password"
+                id="password-box"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="form-input"
+                />
             </div>
 
               <div className="auth-buttons">
