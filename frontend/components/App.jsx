@@ -15,10 +15,10 @@ const App = () => (
     <NavbarContainer />
     <section className="main-content">
 
-    <section className="auth-form-modal">
-      <AuthRoute path="/login" component={AuthFormContainer} />
-      <AuthRoute path="/signup" component={AuthFormContainer} />
-    </section>
+      <section className="auth-form-modal">
+        <AuthRoute path="/login" component={AuthFormContainer} />
+        <AuthRoute path="/signup" component={AuthFormContainer} />
+      </section>
 
     </section>
 

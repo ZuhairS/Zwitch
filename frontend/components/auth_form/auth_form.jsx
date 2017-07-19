@@ -66,14 +66,13 @@ class AuthForm extends React.Component {
 
   modalRequestClose() {
     this.modalIsOpen = false;
-    this.props.history.goBack();
+    this.props.history.push('/');
   }
 
   render() {
 
     return (
       <Modal isOpen={Boolean(this.modalIsOpen)}
-        onAfterOpen={this.modalAfterOpen}
         onRequestClose={this.modalRequestClose}
         className="Modal"
         contentLabel="Sign Up/Log In Modal">
@@ -114,10 +113,10 @@ class AuthForm extends React.Component {
                 />
             </div>
 
-              <div className="auth-buttons">
-                <input type="submit" value={this.submitType()} />
-                <button onClick={this.guestLogin}>Guest Login</button>
-              </div>
+            <div className="auth-buttons">
+              <input type="submit" value={this.submitType()} />
+              <button onClick={this.guestLogin}>Guest Login</button>
+            </div>
 
           </form>
         </div>

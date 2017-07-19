@@ -10,8 +10,8 @@ const unloggedNav = () => (
 
 const loggedNav = (currentUser, logout) => (
 	<nav className="nav-username-logout">
-    <h4 className="nav-username"> {currentUser.username}</h4>
-    <button className="logout-button" onClick={logout}>Log Out</button>
+    <h4 id="nav-username">{currentUser.username}</h4>
+    <button id="logout-button" onClick={logout}>Log Out</button>
 	</nav>
 );
 
@@ -22,7 +22,9 @@ const Navbar = ({ currentUser, logout }) => {
     <nav className="main-nav">
 
       <nav className="left-nav">
-  			<figcaption id="logo">Zwitch</figcaption>
+        <Link to="/">
+    			<h1 id="logo">Zwitch</h1>
+        </Link>
 				<Link to="/channels"><h3>Browse Channels</h3></Link>
       </nav>
 

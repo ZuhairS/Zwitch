@@ -22,18 +22,15 @@
  	height: 100%;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 18px;
-  background-position: top;
-  background-image: url(http://sdeerwallpaper.com/Cool-Wallpapers/Video-Game-Wallpaper-1080p-Is-Cool-Wallpapers.jpg);
  }
 
  .main-nav {
    display: flex;
    justify-content: space-between;
-   background-color: #5B5650;
+   background-color: #6441A4;
    border-bottom: 1px solid grey;
    color: white;
-   opacity: 0.6;
-   filter: alpha(opacity=60);
+  //  opacity: .6;
  }
 
  .left-nav {
@@ -52,6 +49,11 @@
    /*border: 1px solid black;*/
  }
 
+  .left-nav h3:hover, .right-nav h3:hover {
+   color: orange;
+   font-weight: bold;
+ }
+
  .right-nav > .nav-username-logout {
    display: flex;
    justify-content: space-around;
@@ -60,9 +62,10 @@
  }
 
  .main-content {
-   height: 740px;
+   height: 747px;
    width: 100%;
-   border: 1px solid black;
+   background-position: top;
+   background-image: url(http://sdeerwallpaper.com/Cool-Wallpapers/Video-Game-Wallpaper-1080p-Is-Cool-Wallpapers.jpg);
  }
 
 .auth-form-modal {
@@ -79,34 +82,43 @@
     // top: 20%;
     // left: 37%;
     // right: 37%;
-    width: 370px;
+    width: 405px;
     margin: 150px auto;
     // transform: translate(50%, 50%);
   }
 
 .auth-form-container {
-  border: 1px solid lightgrey;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   height: 400px;
   width: 380px;
   padding: 10px;
-  background-color: #FCFAFF;
+  background-color: white;
 }
 
 .login-signup-selector {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-size: 30px;
   height: 40px;
   padding: 20px;
   margin-top: 20px;
+  color: #6441A4;
+
+  h3 {
+    padding: 0 20px;
+  }
+
 }
 
 .errors {
-  height: 35px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
 }
 
 .auth-form {
@@ -115,13 +127,18 @@
   align-items: stretch;
   justify-content: center;
   padding: 0 60px 40px 60px;
-}
 
-.auth-form input{
-  background-color: white;
-  width: 100%;
-  height: 25px;
-  border: 1px solid grey;
+  label {
+    color: #3F2968;
+  }
+
+  input {
+    background-color: white;
+    width: 100%;
+    height: 25px;
+    border: 1px solid grey;
+  }
+
 }
 
 .auth-buttons {
@@ -130,12 +147,12 @@
   align-items: center;
   justify-content: center;
   padding: 10%;
-  border-top: 5px solid darkgrey
+  border-top: 3px solid #8D5CE7;
 }
 
 .auth-buttons > input, .auth-buttons > button {
-  background-color: grey;
-  border: 1px solid darkgrey;
+  background-color: #6441A4;
+  // border: 1px solid darkgrey;
 	color: Black;
   width: 100%;
   color: white;
@@ -146,10 +163,15 @@
 	text-transform: uppercase;
 	font-size: 14px;
 	text-align: center;
-  box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px #37245B;
+}
+
+.auth-buttons > input:hover, .auth-buttons > button:hover {
+  background-color: #3F2968;
+  box-shadow: 0px 0px 0px #37245B;
 }
 
 .active {
   pointer-events: none;
-  font-weight: 700;
+  font-weight: 900;
 }
