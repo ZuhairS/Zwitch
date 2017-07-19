@@ -41,24 +41,62 @@
    padding: 15px;
  }
 
- .right-nav > .login-signup {
+ .right-nav {
    display: flex;
-   justify-content: space-around;
-   padding: 15px;
-   width: 200px;
-   /*border: 1px solid black;*/
+   align-items: center;
  }
 
-  .left-nav h3:hover, .right-nav h3:hover {
+ .login-signup {
+   display: flex;
+   justify-content: space-between;
+  //  padding: 15px;
+   width: 150px;
+   margin-right: 60px;
+  //  border: 1px solid black;
+ }
+
+  .left-nav h3:hover {
    font-weight: bold;
    text-decoration: underline;
  }
 
- .right-nav > .nav-username-logout {
+ .nav-username-logout {
    display: flex;
+   align-items: center;
    justify-content: space-around;
-   padding: 15px;
+  //  padding: 15px;
    width: 300px;
+ }
+
+  .login-signup h3 {
+    background-color: #3F2968;
+    width: 100%;
+    color: white;
+ 	  font-weight: bold;
+ 	  padding: 7px 10px;
+    margin: 2px 0;
+ 	  transition: background-color 0.3s;
+ 	  font-size: 14px;
+ 	  text-align: center;
+    box-shadow: 1px 1px 1px #37245B;
+ }
+
+ #logout-button {
+   background-color: #3F2968;
+   width: 20%;
+   color: white;
+ 	font-weight: bold;
+ 	padding: 7px 10px;
+  margin: 2px 0;
+ 	transition: background-color 0.3s;
+ 	font-size: 14px;
+ 	text-align: center;
+   box-shadow: 1px 1px 1px #37245B;
+ }
+
+ #logout-button:hover, .login-signup h3:hover {
+   background-color: #281A41;
+   box-shadow: 0px 0px 0px #37245B;
  }
 
  .main-content {
@@ -111,6 +149,10 @@
     padding: 0 20px;
   }
 
+  h3:hover {
+    text-decoration: underline;
+  }
+
 }
 
 .errors {
@@ -153,7 +195,6 @@
 .auth-buttons > input, .auth-buttons > button {
   background-color: #6441A4;
   // border: 1px solid darkgrey;
-	color: Black;
   width: 100%;
   color: white;
 	font-weight: bold;
