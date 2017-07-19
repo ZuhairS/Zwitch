@@ -20,14 +20,20 @@
  html {
  	position: relative;
  	height: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+  background-position: top;
+  background-image: url(http://sdeerwallpaper.com/Cool-Wallpapers/Video-Game-Wallpaper-1080p-Is-Cool-Wallpapers.jpg);
  }
 
  .main-nav {
    display: flex;
    justify-content: space-between;
-   background-color: purple;
+   background-color: #5B5650;
    border-bottom: 1px solid grey;
    color: white;
+   opacity: 0.6;
+   filter: alpha(opacity=60);
  }
 
  .left-nav {
@@ -57,8 +63,6 @@
    height: 740px;
    width: 100%;
    border: 1px solid black;
-   background-position: top;
-   background-image: url(http://wallpapercave.com/wp/1OPPRPp.jpg);
  }
 
 .auth-form-modal {
@@ -66,27 +70,39 @@
   justify-content: center;
   align-items: center;
   // height: 800px;
-  width: 100%;
+  // width: 100%;
   // border: 1px solid black;
 }
 
+.Modal {
+    // position: absolute;
+    // top: 20%;
+    // left: 37%;
+    // right: 37%;
+    width: 370px;
+    margin: 150px auto;
+    // transform: translate(50%, 50%);
+  }
+
 .auth-form-container {
-  border: 1px solid blue;
+  border: 1px solid lightgrey;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   height: 400px;
-  width: 350px;
+  width: 380px;
   padding: 10px;
+  background-color: #FCFAFF;
 }
 
 .login-signup-selector {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
+  font-size: 30px;
   height: 40px;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .errors {
@@ -98,8 +114,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  border: 1px solid pink;
-  padding: 40px 60px;;
+  padding: 0 60px 40px 60px;
 }
 
 .auth-form input{
@@ -115,14 +130,26 @@
   align-items: center;
   justify-content: center;
   padding: 10%;
-  border: 1px solid violet;
+  border-top: 5px solid darkgrey
 }
 
 .auth-buttons > input, .auth-buttons > button {
-  padding: 5px;
+  background-color: grey;
+  border: 1px solid darkgrey;
+	color: Black;
+  width: 100%;
+  color: white;
+	font-weight: bold;
+	padding: 7px 0;
+  margin: 2px 0;
+	transition: background-color 0.3s;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 .active {
   pointer-events: none;
-  font-weight: bold;
+  font-weight: 700;
 }

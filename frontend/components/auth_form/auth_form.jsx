@@ -14,6 +14,7 @@ class AuthForm extends React.Component {
     this.clearErrors = this.clearErrors.bind(this);
     this.guestLogin = this.guestLogin.bind(this);
     this.modalIsOpen = this.modalIsOpen.bind(this);
+    this.modalRequestClose = this.modalRequestClose.bind(this);
   }
 
   update(field) {
@@ -63,11 +64,19 @@ class AuthForm extends React.Component {
     return ["login", "signup"].includes(this.props.formType);
   }
 
+  modalRequestClose() {
+    this.modalIsOpen = false;
+    this.props.history.goBack();
+  }
+
   render() {
 
     return (
-      // <Modal isOpen={this.modalIsOpen()}
-      //   contentLabel="Sign Up/Log In Modal">
+      <Modal isOpen={Boolean(this.modalIsOpen)}
+        onAfterOpen={this.modalAfterOpen}
+        onRequestClose={this.modalRequestClose}
+        className="Modal"
+        contentLabel="Sign Up/Log In Modal">
 
         <div className="auth-form-container">
 
@@ -112,7 +121,7 @@ class AuthForm extends React.Component {
 
           </form>
         </div>
-      // </Modal>
+      </Modal>
     );
 
   }
