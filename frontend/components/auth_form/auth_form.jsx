@@ -66,7 +66,7 @@ class AuthForm extends React.Component {
 
   modalRequestClose() {
     this.modalIsOpen = false;
-    this.props.history.push('/');
+    this.props.history.replace('/');
   }
 
   render() {

@@ -1,0 +1,200 @@
+html {
+ 	position: relative;
+ 	height: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+ }
+
+ .main-nav {
+   display: flex;
+   justify-content: space-between;
+   background-color: #6441A4;
+   border-bottom: 1px solid grey;
+   color: white;
+  //  opacity: .6;
+ }
+
+ .left-nav {
+   display: flex;
+   justify-content: space-around;
+   /*border: 1px solid black;*/
+   width: 35%;
+   padding: 15px;
+ }
+
+ .right-nav {
+   display: flex;
+   align-items: center;
+ }
+
+ .login-signup {
+   display: flex;
+   justify-content: space-between;
+  //  padding: 15px;
+   width: 150px;
+   margin-right: 60px;
+  //  border: 1px solid black;
+ }
+
+  .left-nav h3:hover {
+   font-weight: bold;
+   text-decoration: underline;
+ }
+
+ .nav-username-logout {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+  //  padding: 15px;
+   width: 300px;
+ }
+
+  .login-signup h3 {
+    background-color: #3F2968;
+    width: 100%;
+    color: white;
+ 	  font-weight: bold;
+ 	  padding: 7px 10px;
+    margin: 2px 0;
+ 	  transition: background-color 0.3s;
+ 	  font-size: 14px;
+ 	  text-align: center;
+    box-shadow: 1px 1px 1px #37245B;
+ }
+
+ #logout-button {
+   background-color: #3F2968;
+   width: 20%;
+   color: white;
+ 	font-weight: bold;
+ 	padding: 7px 10px;
+  margin: 2px 0;
+ 	transition: background-color 0.3s;
+ 	font-size: 14px;
+ 	text-align: center;
+   box-shadow: 1px 1px 1px #37245B;
+ }
+
+ #logout-button:hover, .login-signup h3:hover {
+   background-color: #281A41;
+   box-shadow: 0px 0px 0px #37245B;
+ }
+
+ .main-content {
+   height: 747px;
+   width: 100%;
+   background-position: top;
+   background-image: url(http://res.cloudinary.com/zwitch/image/upload/q_100/v1500500979/zwitch_background_batman_wfmgoc.jpg);
+ }
+
+.auth-form-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 800px;
+  // width: 100%;
+  // border: 1px solid black;
+}
+
+.Modal {
+    // position: absolute;
+    // top: 20%;
+    // left: 37%;
+    // right: 37%;
+    width: 405px;
+    margin: 150px auto;
+    // transform: translate(50%, 50%);
+  }
+
+.auth-form-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 420px;
+  width: 420px;
+  padding: 10px;
+  background-color: white;
+}
+
+.login-signup-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  height: 40px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #6441A4;
+
+  h3 {
+    padding: 0 20px;
+  }
+
+  h3:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.errors {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0 60px 40px 60px;
+  // border: 1px solid black;
+
+  label {
+    color: #3F2968;
+  }
+
+  input {
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #3F2968;
+  }
+
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 20%;
+  border-top: 2px solid #6743A7;
+}
+
+.auth-buttons > input, .auth-buttons > button {
+  background-color: #6441A4;
+  // border: 1px solid darkgrey;
+  width: 100%;
+  color: white;
+	font-weight: bold;
+	padding: 7px 0;
+  margin: 5px 0;
+	transition: background-color 0.3s;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+  box-shadow: 1px 1px 1px #37245B;
+}
+
+.auth-buttons > input:hover, .auth-buttons > button:hover {
+  background-color: #3F2968;
+  box-shadow: 0px 0px 0px #37245B;
+}
+
+.active {
+  pointer-events: none;
+  font-weight: 900;
+}
