@@ -13,13 +13,14 @@ import NavbarContainer from './navbar/navbar_container';
 const App = () => (
   <section className="zwitch">
     <NavbarContainer />
-
+    <section className="main-content">
 
     <section className="auth-form-modal">
       <AuthRoute path="/login" component={AuthFormContainer} />
       <AuthRoute path="/signup" component={AuthFormContainer} />
     </section>
 
+    </section>
 
   </section>
 );
