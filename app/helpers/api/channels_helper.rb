@@ -1,2 +1,2 @@
-module ChannelsHelper
+module Api::ChannelsHelper
 end

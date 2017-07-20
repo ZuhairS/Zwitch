@@ -19,6 +19,15 @@ class Channel < ApplicationRecord
     primary_key: :id,
     foreign_key: :owner_id
 
+  def self.featured_channels
+    Channel.all.limit(8)
+  end
+
+  def self.featured_channel
+    # Selects random num fron channel count and then selects first result.
+    Channel.offset(rand(Channel.count)).first
+  end
+
   private
 
   def ensure_default_channel_name

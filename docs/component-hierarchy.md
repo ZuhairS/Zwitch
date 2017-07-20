@@ -5,7 +5,7 @@
 
 #### FeatureContainer
 - FeatureStream
-- FeatureChannels (Selector: SelectFeaturedChannel)
+- FeatureChannels
 
 #### NavbarContainer
 - Navbar

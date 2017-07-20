@@ -28,22 +28,57 @@
         id: 1,
         channelName: "Game Trailers",
         ownerId: 1,
+        videoUrl: "https://www.youtube.com/watch?v=gOE2BVRCUkM",
+        streamName: "God of War E3"
         },
       2: {
         id: 2,
         channelName: "mankey's channel",
         ownerId: 2,
+        videoUrl: ""
+        streamName: "mankey's Stream"
+      },
+      3: {
+        id: 3,
+        channelName: "theRadBrad's Walkthroughs",
+        ownerId: 3,
+        videoUrl: "https://www.youtube.com/watch?v=RLHR5smxbsc",
+        streamName: "Dying Light: The Following Walkthrough - Part 1"
       }
     },
+    featuredChannels: {
+      1: {
+        id: 1,
+        channelName: "Game Trailers",
+        ownerId: 1,
+        videoUrl: "https://www.youtube.com/watch?v=gOE2BVRCUkM",
+        streamName: "God of War E3"
+        },
+      3: {
+        id: 3,
+        channelName: "Game Walkthroughs",
+        ownerId: 3,
+        videoUrl: "https://www.youtube.com/watch?v=RLHR5smxbsc",
+        streamName: "Dying Light: The Following Walkthrough - Part 1"
+      }
+    },
+    featuredChannel: {
+      id: 1,
+      channelName: "Game Trailers",
+      ownerId: 1,
+      videoUrl: "https://www.youtube.com/watch?v=gOE2BVRCUkM",
+      streamName: "God of War E3",
+      streamDescription: "Footage of the new God of War game from E3",
+      },
     selectedChannel: {
       id: 1,
       channelName: "Game Trailers",
       ownerId: 1,
-      videoUrl: "https://www.youtube.com/watch?v=gOE2BVRCUkM"
+      videoUrl: "https://www.youtube.com/watch?v=gOE2BVRCUkM",
       streamName: "God of War E3",
-      streamDesc: "Footage of the new God of War game from E3",
+      streamDescription: "Footage of the new God of War game from E3",
       bannerImgUrl: ""
-    }
+    },
     customizeErrors: []
   }
 

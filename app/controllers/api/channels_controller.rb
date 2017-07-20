@@ -30,4 +30,5 @@ class Api::ChannelsController < ApplicationController
               :stream_description,
               :banner_image_url)
   end
+
 end

@@ -14,8 +14,8 @@
   align-items: center;
   font-weight: lighter;
   /*border: 1px solid black;*/
-  width: 25%;
-  padding: 15px;
+  width: 20%;
+  padding: 10px;
 }
 
 .left-nav h3:hover {
@@ -24,6 +24,8 @@
 
 #logo {
  font-weight: bold;
+ font-size: 18px;
+ margin: 0 20px;
 }
 
 .right-nav {
@@ -78,11 +80,4 @@
 #logout-button:hover, .login-signup h3:hover {
   background-color: #281A41;
   box-shadow: 0px 0px 0px #37245B;
-}
-
-.main-content {
-  height: 1030px;
-  width: 100%;
-  background-position: top;
-  background-image: url(http://res.cloudinary.com/zwitch/image/upload/q_100/v1500500979/zwitch_background_batman_wfmgoc.jpg);
 }

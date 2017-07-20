@@ -1,0 +1,17 @@
+html {
+ 	position: relative;
+ 	height: 100%;
+  font-size: 14px;
+ }
+
+.main-content {
+ height: 1030px;
+ width: 100%;
+ background-position: top;
+ background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url(http://res.cloudinary.com/zwitch/image/upload/q_100/v1500500979/zwitch_background_batman_wfmgoc.jpg);
+
+ // -webkit-background-size: cover;
+ //  -moz-background-size:  cover;
+ //  -o-background-size: cover;
+ //  background-size: cover;
+}
