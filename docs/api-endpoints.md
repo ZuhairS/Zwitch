@@ -14,7 +14,6 @@
 | Session    | 'DELETE' | '/api/session' | Logout |
 | - | - | - | - |
 | Channels   | 'GET'    | '/api/channels' | Index |
-| Channels   | 'POST'   | '/api/channels/'  | New Channel|
 | Channels   | 'GET'   | '/api/channels/:id'  | Show Channel|
 | Channels   | 'PATCH'   | '/api/channels/:id'  | Update Channel|
 | - | - | - | - |
