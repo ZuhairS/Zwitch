@@ -8,8 +8,8 @@
 
 Zwitch is a web application inspired by Twitch built using Ruby on Rails and React/Redux. By the end of week 9, the hope is that this app will, at minimum, satisfy the following criteria professionally:
 
-- [ ] Hosting on Heroku
-- [ ] Signup/Login/Logout along with demo Login
+- [x] Hosting on Heroku
+- [x] Signup/Login/Logout along with demo Login
 - [ ] Adding/streaming online videos
 - [ ] Follows
 - [ ] Basic chat

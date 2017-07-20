@@ -15,8 +15,17 @@ class User < ApplicationRecord
             length: { minimum: 6 },
             allow_nil: :true
 
-  after_initialize :ensure_session_token, :ensure_default_profile_image
+  after_initialize :ensure_session_token,
+                   :ensure_default_profile_image
+
   before_validation :ensure_session_token_uniqueness
+
+  after_create :ensure_channel
+
+  has_one :channel,
+    class_name: "Channel",
+    primary_key: :id,
+    foreign_key: :owner_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
@@ -41,6 +50,10 @@ class User < ApplicationRecord
   end
 
   private
+
+  def ensure_channel
+    self.channel ||= Channel.create!(owner_id: self.id)
+  end
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
