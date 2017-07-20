@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const unloggedNav = () => (
   <nav className="login-signup">
@@ -25,7 +25,9 @@ const Navbar = ({ currentUser, logout }) => {
         <Link to="/">
     			<h1 id="logo">Zwitch</h1>
         </Link>
-				<Link to="/channels"><h3>Browse Channels</h3></Link>
+				<NavLink exact strict to="/channels">
+          <h3>Browse</h3>
+        </NavLink>
       </nav>
 
       <nav className="right-nav">

@@ -75,6 +75,7 @@ class AuthForm extends React.Component {
       <Modal isOpen={Boolean(this.modalIsOpen)}
         onRequestClose={this.modalRequestClose}
         className="Modal"
+        overlayClassName="Overlay"
         contentLabel="Sign Up/Log In Modal">
 
         <div className="auth-form-container">
