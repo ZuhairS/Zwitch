@@ -8,10 +8,11 @@ html {
  .main-nav {
    display: flex;
    justify-content: space-between;
+  //  background-color: rgba(155, 222, 111, .4);
    background-color: #6441A4;
    border-bottom: 1px solid grey;
    color: white;
-  //  opacity: .6;
+  //  opacity: .4;
  }
 
  .left-nav {
@@ -101,9 +102,10 @@ html {
     // top: 20%;
     // left: 37%;
     // right: 37%;
-    width: 405px;
+    width: 440px;
     margin: 150px auto;
-    // transform: translate(50%, 50%);
+    // border: 1px solid black;
+    // transform: translate(100%, 50%);
   }
 
 .auth-form-container {

@@ -17,8 +17,8 @@
 |owner_id| integer| not null, foreign key (references users), unique, indexed |
 |video_url| string| -|
 |stream_name| string| not null|
-|stream_desc| string| -|
-|banner_img_url| string| -|
+|stream_desc| text| -|
+|banner_image_url| string| not null|
 
 ## follows
 | column name | data type | details |

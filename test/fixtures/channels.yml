@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  channel_name: MyString
+  owner_id: 1
+  video_url: MyString
+  stream_name: MyString
+  stream_description: MyText
+  banner_image_url: MyString
+
+two:
+  channel_name: MyString
+  owner_id: 1
+  video_url: MyString
+  stream_name: MyString
+  stream_description: MyText
+  banner_image_url: MyString
