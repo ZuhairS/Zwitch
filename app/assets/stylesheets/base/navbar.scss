@@ -13,16 +13,9 @@
   justify-content: space-around;
   align-items: center;
   font-weight: lighter;
-  /*border: 1px solid black;*/
-  width: 20%;
-  padding: 10px;
-
-  h1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-  }
+  // border: 1px solid black;
+  width: 15%;
+  padding: 7px 10px;
 
 }
 
@@ -31,10 +24,14 @@
 }
 
 #logo {
- font-weight: bold;
- font-family: dimitri;
- font-size: 18px;
- margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-family: 'dimitri';
+    font-size: 24px;
+    margin: 5px 10px 0 10px;
+  }
 }
 
 .right-nav {

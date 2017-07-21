@@ -8,12 +8,13 @@ export default class FeaturedVideo extends React.Component {
   }
 
   render() {
-        const opts = {
-            height: '390',
-            width: '640'
+        const options = {
+            height: '540',
+            width: '960'
         };
         return(
-          <YouTube videoId={this.props.youtube_video_id} opts={opts} onReady={this._onReady}/>
+          <YouTube videoId='8pR0o2fGyHg' id="featured"
+            opts={options} onReady={this._onReady}/>
         );
     }
 

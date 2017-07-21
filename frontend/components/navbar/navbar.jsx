@@ -24,10 +24,10 @@ const Navbar = ({ currentUser, logout }) => {
 
       <nav className="left-nav">
         <Link to="/">
-    			<h1 id="logo">
-            <FontAwesome name='twitch'/>
-            Zwitch
-          </h1>
+          <div id='logo'>
+            <FontAwesome name='twitch' size='2x' id='twitch'/>
+      			<h1>Zwitch</h1>
+          </div>
         </Link>
 				<NavLink exact strict to="/channels">
           <h3>Browse</h3>

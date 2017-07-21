@@ -7,6 +7,8 @@ html {
 .main-content {
  height: 1030px;
  width: 100%;
+ display: flex;
+ justify-content: center;
  background-position: top;
  background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url(http://res.cloudinary.com/zwitch/image/upload/q_100/v1500500979/zwitch_background_batman_wfmgoc.jpg);
 
