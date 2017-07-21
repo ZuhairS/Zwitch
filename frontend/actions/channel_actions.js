@@ -29,14 +29,14 @@ export const requestAllChannels = () => dispatch => (
   APIUtil.fetchAllChannels().then(channels => dispatch(receiveAllChannels(channels)))
 );
 
-export const requestSingleChannel = () => dispatch => (
-  APIUtil.fetchSingleChannel().then(channel => dispatch(receiveSingleChannel(channel)))
+export const requestSingleChannel = channelId => dispatch => (
+  APIUtil.fetchSingleChannel(channelId).then(channel => dispatch(receiveSingleChannel(channel)))
 );
 
 export const requestFeaturedChannels = () => dispatch => (
-  APIUtil.fetchFeaturedChannels().then(channels => dispatch(receiveAllChannels(channels)))
+  APIUtil.fetchFeaturedChannels().then(channels => dispatch(receiveFeaturedChannels(channels)))
 );
 
 export const requestFeaturedChannel = () => dispatch => (
-  APIUtil.fetchFeaturedChannel().then(channel => dispatch(receiveSingleChannel(channel)))
+  APIUtil.fetchFeaturedChannel().then(channel => dispatch(receiveFeaturedChannel(channel)))
 );

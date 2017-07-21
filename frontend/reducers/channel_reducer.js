@@ -18,9 +18,9 @@ const ChannelReducer = (state = defaultState(), action) => {
     case RECEIVE_SINGLE_CHANNEL:
       return merge({}, state, { selectedChannel: action.channel });
     case RECEIVE_FEATURED_CHANNELS:
-      return merge({}, state, { allChannels: action.channels });
+      return merge({}, state, { featuredChannels: action.channels });
     case RECEIVE_FEATURED_CHANNEL:
-      return merge({}, state, { selectedChannel: action.channel });
+      return merge({}, state, { featuredChannel: action.channel });
     default:
       return state;
   }
