@@ -1,6 +1,7 @@
 import React from 'react';
+import FeaturedVideo from '../videos/featured_video';
 
-export default class Featured extends React.component {
+export default class Featured extends React.Component {
 
   constructor(props) {
     super(props);
@@ -12,7 +13,7 @@ export default class Featured extends React.component {
 
     if (featuredChannel) {
       return (
-        <div></div>
+        <FeaturedVideo />
       );
     }
 
