@@ -9,14 +9,14 @@ import {
 import { AuthRoute } from '../util/route_util';
 import AuthFormContainer from './auth_form/auth_form_container';
 import NavbarContainer from './navbar/navbar_container';
-import FeaturedContainer from './channels/featured_container';
+import FeaturedChannelContainer from './channels/featured_channel_container';
 
 const App = () => (
   <section className="zwitch">
     <NavbarContainer />
     <section className="main-content">
 
-      <FeaturedContainer />
+      <FeaturedChannelContainer />
 
       <section className="auth-form-modal">
         <AuthRoute path="/login" component={AuthFormContainer} />

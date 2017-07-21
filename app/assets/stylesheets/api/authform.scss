@@ -48,7 +48,16 @@
   color: #6441A4;
 
   h3 {
+    font-family: 'dimitri';
     padding: 0 20px;
+  }
+
+  .active {
+    pointer-events: none;
+
+    h3 {
+      font-family: 'dimis';
+    }
   }
 }
 
@@ -100,7 +109,7 @@
   // border: 1px solid darkgrey;
   width: 100%;
   color: white;
-	font-weight: bold;
+	font-weight: lighter;
 	padding: 7px 0;
   margin: 5px 0;
 	transition: background-color 0.3s;
@@ -113,9 +122,4 @@
 .auth-buttons > input:hover, .auth-buttons > button:hover {
   background-color: #3F2968;
   box-shadow: 0px 0px 0px #37245B;
-}
-
-.active {
-  pointer-events: none;
-  font-weight: 900;
 }

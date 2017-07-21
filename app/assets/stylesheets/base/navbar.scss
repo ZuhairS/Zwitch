@@ -15,7 +15,13 @@
   font-weight: lighter;
   // border: 1px solid black;
   width: 15%;
-  padding: 7px 10px;
+  min-width: 200px;
+  padding: 5px 10px;
+
+  // .active {
+  //   pointer-events: none;
+  //   font-weight: 700;
+  // }
 
 }
 
@@ -28,7 +34,7 @@
   justify-content: space-between;
   align-items: center;
   h1 {
-    font-family: 'dimitri';
+    font-family: 'dimis';
     font-size: 24px;
     margin: 5px 10px 0 10px;
   }
@@ -49,9 +55,8 @@
   }
 }
 
- .login-signup h3 {
+.login-signup h3, #logout-button {
    background-color: #6441A4;
-   width: 100%;
    color: white;
    font-weight: bold;
    padding: 7px 10px;
@@ -60,6 +65,10 @@
    font-size: 12px;
    text-align: center;
    box-shadow: 1px 1px 1px #37245B;
+}
+
+.login-signup h3 {
+  width: 100%;
 }
 
 .nav-username-logout {
@@ -71,16 +80,7 @@
 }
 
 #logout-button {
-  background-color: #6441A4;
   width: 20%;
-  color: white;
- font-weight: bold;
- padding: 7px 10px;
- margin: 2px 0;
- transition: background-color 0.3s;
- font-size: 14px;
- text-align: center;
-  box-shadow: 1px 1px 1px #37245B;
 }
 
 #logout-button:hover, .login-signup h3:hover {

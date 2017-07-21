@@ -3,16 +3,16 @@
 #### AuthFormContainer
 - AuthForm
 
-#### FeatureContainer
-- FeatureStream
-- FeatureChannels
+#### FeaturedContainer
+- FeaturedChannel
+- FeaturedChannels
 
 #### NavbarContainer
 - Navbar
 
 #### ChannelContainer
 - ChannelIndex
-- ChannelIndexItem
+- ChannelItem
 - ChannelDetail
   - ChannelForm
 
@@ -25,7 +25,7 @@
 
 #### ChatContainer
 - Chat
-- ChatItems
+- ChatItem
 
 #### Bonus: SearchContainer
 

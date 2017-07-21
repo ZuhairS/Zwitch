@@ -58,6 +58,7 @@ class AuthForm extends React.Component {
       password: "guestpassword"
     };
     this.props.guestLogin(guestUser);
+    this.props.clearErrors();
   }
 
   modalIsOpen() {
