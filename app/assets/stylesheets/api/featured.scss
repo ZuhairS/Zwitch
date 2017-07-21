@@ -34,6 +34,18 @@
     #featured-stream-info {
       display: flex;
       flex-direction: column;
+      align-self: flex-start;
+      margin-top: 25px;
+      width: 70%;
+
+      p {
+        font-weight: lighter;
+        font-size: 12px;
+      }
+    }
+
+    #go-to-channel:hover {
+     text-decoration: underline;
     }
 
   }

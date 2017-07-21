@@ -30,7 +30,7 @@ export default class FeaturedChannel extends React.Component {
               <p>Description Placeholder</p>
             </div>
 
-            <Link to={`/channels/${featuredChannel.id}`}>Go to Channel</Link>
+            <Link id='go-to-channel' to={`/channels/${featuredChannel.id}`}>Go to Channel</Link>
 
           </aside>
         </div>
