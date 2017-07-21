@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 import { Link, NavLink } from 'react-router-dom';
 
 const unloggedNav = () => (
@@ -23,7 +24,10 @@ const Navbar = ({ currentUser, logout }) => {
 
       <nav className="left-nav">
         <Link to="/">
-    			<h1 id="logo">Zwitch</h1>
+    			<h1 id="logo">
+            <FontAwesome name='twitch'/>
+            Zwitch
+          </h1>
         </Link>
 				<NavLink exact strict to="/channels">
           <h3>Browse</h3>

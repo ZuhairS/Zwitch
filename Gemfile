@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 # For Ajax requests
 gem 'jquery-rails'
 
+# For Twitch Logo
+gem 'font-awesome-sass'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
