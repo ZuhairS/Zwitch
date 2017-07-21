@@ -8,7 +8,7 @@ const mapStateToProps = ({ channels }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestFeaturedChannel: () => dispatch(requestFeaturedChannel)
+  requestFeaturedChannel: () => dispatch(requestFeaturedChannel())
 });
 
 export default connect(

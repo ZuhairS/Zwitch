@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
+import {requestFeaturedChannel} from './actions/channel_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -17,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  window.dispatch = store.dispatch;
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store } />, root);
 });
+
+window.requestFeaturedChannel = requestFeaturedChannel;

@@ -31,11 +31,11 @@ class Channel < ApplicationRecord
   private
 
   def ensure_default_channel_name
-    self.channel_name ||= "#{self.owner.username}'s Channel"
+    self.channel_name ||= self.owner.username
   end
 
   def ensure_stream_name
-    self.stream_name ||= "#{self.owner.username}'s Stream"
+    self.stream_name ||= "#{self.channel_name} Stream"
   end
 
   def ensure_default_profile_image
