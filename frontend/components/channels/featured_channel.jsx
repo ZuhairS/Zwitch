@@ -12,7 +12,12 @@ export default class FeaturedChannel extends React.Component {
 
     if (featuredChannel) {
       return (
-        <FeaturedVideo />
+        <div id='featured-container'>
+          <FeaturedVideo />
+          <aside>
+            <img></img>
+          </aside>
+        </div>
       );
     }
   }
