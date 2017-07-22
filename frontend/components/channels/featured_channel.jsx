@@ -13,32 +13,36 @@ export default class FeaturedChannel extends React.Component {
   }
 
   render() {
-
     const featuredChannel = this.props.featuredChannel;
+
     if (featuredChannel) {
       return (
         <div id='featured-container'>
           <FeaturedVideo videoUrl={featuredChannel.video_url} />
           <aside id='featured-description'>
 
-            <div id='profile-image'>
-              <img src={featuredChannel.profile_image_url}></img>
-            </div>
+            <Link className='go-to-channel' to={`/channels/${featuredChannel.id}`}>
+              <div id='profile-image'>
+                <img src={featuredChannel.profile_image_url}></img>
+              </div>
+            </Link>
 
             <div id='featured-stream-info'>
               <h3>
                 <strong>
                   {featuredChannel.channel_name}
                 </strong>
-                {' streaming'}
+                {' streaming '}
                 <strong>
-                  {` ${featuredChannel.stream_name}`}
+                  <Link id='stream-name' className='go-to-channel' to={`/channels/${featuredChannel.id}`}>
+                    {`${featuredChannel.stream_name}`}
+                  </Link>
                 </strong>
               </h3>
               <p>{featuredChannel.stream_description}</p>
             </div>
 
-            <Link id='go-to-channel' to={`/channels/${featuredChannel.id}`}>Go to Channel</Link>
+            <Link className='go-to-channel' to={`/channels/${featuredChannel.id}`}>Go to Channel</Link>
 
           </aside>
         </div>

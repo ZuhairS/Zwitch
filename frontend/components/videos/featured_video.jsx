@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import { youtubeIdExtractor } from '../../util/video_util';
 
 export default class FeaturedVideo extends React.Component {
 
@@ -8,14 +9,23 @@ export default class FeaturedVideo extends React.Component {
   }
 
   render() {
-        const options = {
-            height: '540',
-            width: '960'
-        };
-        return(
-          <YouTube videoId='8pR0o2fGyHg' id="featured"
-            opts={options} onReady={this._onReady}/>
-        );
-    }
 
+    const options = {
+        height: '540',
+        width: '960'
+    };
+
+    const videoUrl = this.props.videoUrl;
+
+    if (videoUrl) {
+      return(
+        <YouTube videoId={youtubeIdExtractor(videoUrl)} id="featured"
+          opts={options} onReady={this._onReady}/>
+      );
+    } else {
+      return (
+        <div id='no-vid'></div>
+      );
+    }
+  }
 }

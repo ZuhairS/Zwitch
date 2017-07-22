@@ -14,6 +14,12 @@
     // width: 100%;
   }
 
+  #no-vid {
+    width: 960px;
+    height: 540px;
+    border: 1px solid #4B367C;
+  }
+
   #featured-description {
     background-color: #4B367C;
     height: 100px;
@@ -25,7 +31,7 @@
     #profile-image {
       height: auto;
       width: 75px;
-      border: 1px solid #402968;
+      // border: 1px solid #402968;
     }
 
     img {
@@ -46,6 +52,10 @@
         // font-size: 16px;
       }
 
+      #stream-name {
+        font-style: italic;
+      }
+
       p {
         font-weight: lighter;
         font-size: 12px;
@@ -53,7 +63,11 @@
       }
     }
 
-    #go-to-channel:hover {
+    .go-to-channel {
+      font-weight: lighter;
+    }
+
+    .go-to-channel:hover {
      text-decoration: underline;
     }
 
