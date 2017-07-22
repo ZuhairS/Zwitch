@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Channel.destroy_all
+
 guestUser = User.create(username: "Guest", password: "guestpassword")
 
 user1 = User.create(username: "potato monster", password: "potatoes")
