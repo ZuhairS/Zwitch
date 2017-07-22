@@ -11,9 +11,6 @@ class User < ApplicationRecord
   validates :username,
             uniqueness: true
 
-  validates :username,
-            length: { minimum: 3 }
-
   validates :password,
             length: { minimum: 6 },
             allow_nil: :true
@@ -28,7 +25,8 @@ class User < ApplicationRecord
   has_one :channel,
     class_name: "Channel",
     primary_key: :id,
-    foreign_key: :owner_id
+    foreign_key: :owner_id,
+    dependent: :destroy
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
@@ -63,7 +61,7 @@ class User < ApplicationRecord
   end
 
   def ensure_default_profile_image
-    self.profile_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500402385/default_profile_img_cjcyo2.png"
+    self.profile_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500693494/Zwitch_Profile_Image_pxu1oi.png"
   end
 
   def ensure_session_token_uniqueness

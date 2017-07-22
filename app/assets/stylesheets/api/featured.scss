@@ -11,6 +11,7 @@
   #featured {
     border: 1px solid #4B367C;
     margin-top: 30px;
+    // width: 100%;
   }
 
   #featured-description {
@@ -24,6 +25,7 @@
     #profile-image {
       height: auto;
       width: 75px;
+      border: 1px solid #402968;
     }
 
     img {
@@ -36,11 +38,18 @@
       flex-direction: column;
       align-self: flex-start;
       margin-top: 25px;
-      width: 70%;
+      width: 700px;
+      // border: 1px solid red;
+
+      strong {
+        font-weight: bold;
+        // font-size: 16px;
+      }
 
       p {
         font-weight: lighter;
         font-size: 12px;
+        // border: 1px solid blue;
       }
     }
 

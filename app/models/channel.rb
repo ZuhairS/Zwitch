@@ -12,7 +12,7 @@ class Channel < ApplicationRecord
 
   before_validation :ensure_default_channel_name,
                     :ensure_stream_name,
-                    :ensure_default_profile_image
+                    :ensure_default_banner_image
 
   belongs_to :owner,
     class_name: "User",
@@ -20,12 +20,13 @@ class Channel < ApplicationRecord
     foreign_key: :owner_id
 
   def self.featured_channels
-    Channel.all.limit(8)
+    Channel.where.not(video_url: :null).limit(8)
   end
 
   def self.featured_channel
-    # Selects random num fron channel count and then selects first result.
-    Channel.offset(rand(Channel.count)).first
+    # Selects random num fron playing channel count and then selects first result.
+    playing_channels = Channel.where.not(video_url: :null)
+    playing_channels.offset(rand(playing_channels.count)).first
   end
 
   private
@@ -35,10 +36,10 @@ class Channel < ApplicationRecord
   end
 
   def ensure_stream_name
-    self.stream_name ||= "#{self.channel_name} Stream"
+    self.stream_name ||= "#{self.channel_name}'s Stream"
   end
 
-  def ensure_default_profile_image
+  def ensure_default_banner_image
     self.banner_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/v1500511693/zwitch_default_banner_img_vtrk3t.jpg"
   end
 

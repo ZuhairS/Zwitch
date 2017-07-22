@@ -1,4 +1,3 @@
-
 export const signup = user => (
   $.ajax({
     type: "POST",

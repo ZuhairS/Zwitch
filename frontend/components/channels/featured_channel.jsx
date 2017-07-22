@@ -18,7 +18,7 @@ export default class FeaturedChannel extends React.Component {
     if (featuredChannel) {
       return (
         <div id='featured-container'>
-          <FeaturedVideo />
+          <FeaturedVideo videoUrl={featuredChannel.video_url} />
           <aside id='featured-description'>
 
             <div id='profile-image'>
@@ -26,8 +26,16 @@ export default class FeaturedChannel extends React.Component {
             </div>
 
             <div id='featured-stream-info'>
-              <h3>{featuredChannel.channel_name} streaming {featuredChannel.stream_name}</h3>
-              <p>Description Placeholder</p>
+              <h3>
+                <strong>
+                  {featuredChannel.channel_name}
+                </strong>
+                {' streaming'}
+                <strong>
+                  {` ${featuredChannel.stream_name}`}
+                </strong>
+              </h3>
+              <p>{featuredChannel.stream_description}</p>
             </div>
 
             <Link id='go-to-channel' to={`/channels/${featuredChannel.id}`}>Go to Channel</Link>
