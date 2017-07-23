@@ -19,6 +19,11 @@
       id: 2,
       username: "mankey",
       profileImgUrl: ""
+    },
+    3: {
+      id: 3,
+      username: "theRadBrad",
+      profileImgUrl: ""
     }
   }
 

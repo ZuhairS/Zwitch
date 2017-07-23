@@ -25,20 +25,23 @@ class AuthForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.props.clearErrors();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors) {
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   clearErrors() {
@@ -66,8 +69,8 @@ class AuthForm extends React.Component {
   }
 
   modalRequestClose() {
-    this.modalIsOpen = false;
     this.props.clearErrors();
+    this.modalIsOpen = false;
     this.props.history.replace('/');
   }
 

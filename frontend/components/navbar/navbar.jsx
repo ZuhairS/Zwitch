@@ -11,8 +11,8 @@ const unloggedNav = () => (
 
 const loggedNav = (currentUser, logout) => (
 	<nav className="nav-username-logout">
-    
-    <Link to={`/channels/${currentUser.id}`}>
+
+    <Link to={`/channels/${currentUser.username}`}>
       <div id='username-image'>
         <img src={currentUser.profile_image_url} />
         <div id='username-notification'>
