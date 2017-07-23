@@ -26,7 +26,7 @@ export default class FeaturedVideo extends React.Component {
         width: '960',
         playerVars: {
           autoplay: 1,
-          controls: 0,
+          controls: 2,
           disablekb: 1,
           modestbranding: 1,
           rel: 0,
