@@ -2,17 +2,17 @@ import { connect } from 'react-redux';
 import { requestFeaturedChannels } from '../../actions/channel_actions';
 import { selectFeaturedChannels } from '../../reducers/selectors';
 
-import FeaturedChannels from './featured_channels';
+import Channels from './channels';
 
 const mapStateToProps = ({ channels }) => ({
-  featuredChannels: selectFeaturedChannels(channels)
+  channels: selectFeaturedChannels(channels)
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestFeaturedChannels: () => dispatch(requestFeaturedChannels)
+  requestChannels: () => dispatch(requestFeaturedChannels())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FeaturedChannels);
+)(Channels);

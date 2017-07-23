@@ -19,7 +19,7 @@ class Channel < ApplicationRecord
     foreign_key: :owner_id
 
   def self.featured_channels
-    Channel.where.not(video_url: :null).limit(8)
+    Channel.where.not(video_url: :null).limit(6)
   end
 
   def self.featured_channel

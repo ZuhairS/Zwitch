@@ -1,3 +1,49 @@
 // Place all the styles related to the Channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.channels-container {
+  margin-top: 60px;
+  width: 80%;
+
+  h1 {
+    display: inline-block;
+    font-size: 28px;
+    font-family: 'dimitri';
+    color: white;
+    padding: 3px 5px 0 3px;
+    margin-bottom: 10px;
+    background-color: rgba(75, 54, 124, .8);
+  }
+
+  .channels {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .featured-channel-item {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: 360px;
+      margin: 0 10px 20px 0;
+
+      #channel-info {
+        background-color: rgba(75, 54, 124, .9);
+        border-top: 1px solid #4B367C;
+        color: white;
+        padding: 5px 10px;
+        margin-top: 3px;
+        // font-size: 14px;
+
+        p {
+          font-weight: lighter;
+          font-size: 12px;
+        }
+
+        .link:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

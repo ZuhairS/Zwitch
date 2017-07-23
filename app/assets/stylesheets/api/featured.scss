@@ -7,17 +7,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 30px;
 
-  #featured {
+  #featured, #no-vid {
     border: 1px solid #4B367C;
-    margin-top: 30px;
-    // width: 100%;
-  }
-
-  #no-vid {
+    // margin-top: 30px;
     width: 960px;
     height: 540px;
-    border: 1px solid #4B367C;
+    // pointer-events: none;
   }
 
   #featured-description {

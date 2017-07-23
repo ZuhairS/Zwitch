@@ -22,10 +22,10 @@ export default class FeaturedVideo extends React.Component {
     }
 
     const options = {
-        height: '540',
-        width: '960',
+        // height: '720',
+        // width: '1280',
         playerVars: {
-          autoplay: 1,
+          autoplay: 0,
           controls: 2,
           disablekb: 1,
           modestbranding: 1,
