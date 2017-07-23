@@ -8,19 +8,37 @@ export default class FeaturedVideo extends React.Component {
     super(props);
   }
 
+  onEnd(event) {
+    event.target.playVideo();
+  }
+
   render() {
+
+    const videoUrl = this.props.videoUrl;
+    let videoId;
+
+    if (videoUrl) {
+      videoId = youtubeIdExtractor(this.props.videoUrl);
+    }
 
     const options = {
         height: '540',
-        width: '960'
+        width: '960',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          modestbranding: 1,
+          rel: 0,
+          iv_load_policy: 3,
+          showinfo: 0
+        }
     };
 
-    const videoUrl = this.props.videoUrl;
-
-    if (videoUrl) {
+    if (videoId) {
       return(
-        <YouTube videoId={youtubeIdExtractor(videoUrl)} id="featured"
-          opts={options} onReady={this._onReady}/>
+        <YouTube videoId={videoId} id="featured"
+          opts={options} onEnd={this.onEnd}/>
       );
     } else {
       return (

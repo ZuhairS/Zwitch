@@ -16,7 +16,7 @@
   // border: 1px solid black;
   width: 15%;
   min-width: 200px;
-  padding: 5px 10px;
+  padding: 2px 10px;
 
   // .active {
   //   pointer-events: none;
@@ -33,9 +33,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   h1 {
     font-family: 'dimis';
-    font-size: 24px;
+    font-size: 30px;
     margin: 5px 10px 0 10px;
   }
 }
