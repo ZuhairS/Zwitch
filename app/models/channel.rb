@@ -7,7 +7,6 @@ class Channel < ApplicationRecord
             presence: true
 
   validates :channel_name,
-            :owner_id,
             uniqueness: true
 
   before_validation :ensure_default_channel_name,

@@ -9,7 +9,8 @@ class User < ApplicationRecord
             presence: true
 
   validates :username,
-            uniqueness: true
+            uniqueness: true,
+            length: { maximum: 16 }
 
   validates :password,
             length: { minimum: 6 },
