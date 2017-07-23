@@ -11,16 +11,19 @@ const unloggedNav = () => (
 
 const loggedNav = (currentUser, logout) => (
 	<nav className="nav-username-logout">
-    <div id='username-image'>
-      <img src={currentUser.profile_image_url} />
-      <div id='username-notification'>
-        <h4 id="nav-username">{currentUser.username}</h4>
-        <div id='status'>
-          <span id='notification-box'></span>
-          <h6>Online</h6>
+    
+    <Link to={`/channels/${currentUser.id}`}>
+      <div id='username-image'>
+        <img src={currentUser.profile_image_url} />
+        <div id='username-notification'>
+          <h4 id="nav-username">{currentUser.username}</h4>
+          <div id='status'>
+            <span id='notification-box'></span>
+            <h6>Online</h6>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
 
     <button id="logout-button" onClick={logout}>Log Out</button>
 	</nav>
