@@ -25,6 +25,10 @@ class Channel < ApplicationRecord
     primary_key: :id,
     foreign_key: :owner_id
 
+  def self.all_channels
+    Channel.where.not(video_url: :null)
+  end
+
   def self.featured_channels
     Channel.where.not(video_url: :null).limit(6)
   end

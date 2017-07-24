@@ -42,7 +42,7 @@ const Navbar = ({ currentUser, logout }) => {
       			<h1>Zwitch</h1>
           </div>
         </Link>
-				<NavLink exact strict to="/channels">
+				<NavLink to="/channels">
           <h3>Browse</h3>
         </NavLink>
       </nav>

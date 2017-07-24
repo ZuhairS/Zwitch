@@ -6,7 +6,6 @@ export default class Channels extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   componentDidMount() {
@@ -51,7 +50,7 @@ export default class Channels extends React.Component {
       );
     } else {
       return (
-        <h1>HELLO!</h1>
+        <div>Fetching...</div>
       );
     }
   }

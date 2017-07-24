@@ -3,7 +3,7 @@ class Api::ChannelsController < ApplicationController
   before_action :require_logged_in, only: [:update]
 
   def index
-    @channels = Channel.all
+    @channels = Channel.all_channels
   end
 
   def show

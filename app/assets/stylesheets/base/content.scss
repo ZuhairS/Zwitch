@@ -4,8 +4,14 @@ html {
   font-size: 14px;
  }
 
-.main-content {
- width: 100%;
+.browse-channels {
+  // width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.featured-content {
+ // width: 100%;
  display: flex;
  flex-direction: column;
  justify-content: space-between;

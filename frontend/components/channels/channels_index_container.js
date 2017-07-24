@@ -2,17 +2,18 @@ import { connect } from 'react-redux';
 import { requestAllChannels } from '../../actions/channel_actions';
 import { selectAllChannels } from '../../reducers/selectors';
 
-import ChannelIndex from './channel_index';
+import Channels from './channels';
 
 const mapStateToProps = ({ channels }) => ({
-  allChannels: selectAllChannels(channels)
+  channels: selectAllChannels(channels),
+  title: 'All Channels'
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestAllChannels: () => dispatch(requestAllChannels())
+  requestChannels: () => dispatch(requestAllChannels())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ChannelIndex);
+)(Channels);

@@ -91,7 +91,7 @@ class AuthForm extends React.Component {
             </NavLink>
             <NavLink onClick={this.clearErrors()} to="/signup">
               <h3>Sign Up</h3>
-              </NavLink>
+            </NavLink>
           </div>
 
           <form onSubmit={this.handleSubmit} className="form-box">
