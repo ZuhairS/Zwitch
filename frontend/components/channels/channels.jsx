@@ -19,11 +19,10 @@ export default class Channels extends React.Component {
     if (channels) {
       return (
         <section className="channels-container">
-         <h1>{title}</h1>
+        <h1>{title}</h1>
          <ul className='flex-grid channels'>
            {channels.map(channel => (
             <li key={channel.id} className="channel-item">
-
               <Link to={`/channels/${channel.id}`}>
                 <img
                   src={`https://img.youtube.com/vi/${youtubeIdExtractor(channel.video_url)}/maxresdefault.jpg`}

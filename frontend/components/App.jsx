@@ -20,7 +20,9 @@ const App = () => (
 
     <section className='browse-channels'>
       <Route path='/channels' component={FollowContainer} />
-      <Route exact path='/channels' component={ChannelsIndexContainer} />
+      <section className='browse-container'>
+        <Route exact path='/channels' component={ChannelsIndexContainer} />
+      </section>
     </section>
 
     <section className="featured-content">
