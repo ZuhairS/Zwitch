@@ -17,9 +17,11 @@ import FollowContainer from './follow/follow_container';
 const App = () => (
   <section className="zwitch">
     <NavbarContainer />
+    <div id='navbar-placeholder'></div>
+    <Route path='/channels' component={FollowContainer} />
 
     <section className='browse-channels'>
-      <Route path='/channels' component={FollowContainer} />
+      <Route path='/channels' render={() => <div id='follow-bar-placeholder'></div>} />
       <section className='browse-container'>
         <Route exact path='/channels' component={ChannelsIndexContainer} />
       </section>
