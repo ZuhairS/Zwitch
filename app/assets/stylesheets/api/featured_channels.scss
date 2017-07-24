@@ -2,19 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.browse-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  // border: 1px solid blue;
-}
-
-.channels-container {
+.featured-channels-container {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // width: 1140px;
+  width: 1140px;
   // border: 1px solid red;
 
   h1 {
@@ -26,7 +19,7 @@
     color: white;
     padding: 3px 0 0 0;
     margin-bottom: 10px;
-    // margin-left: 10%;
+    // margin-left: 10px;
     background-color: rgba(75, 54, 124, .8);
     border-radius: 5px;
     // border: 1px solid green;
@@ -34,7 +27,7 @@
 
   .channels {
     flex-wrap: wrap;
-    // width: 100%;
+    width: 100%;
     justify-content: center;
     // border: 1px solid orange;
 

@@ -6,7 +6,8 @@ import Channels from './channels';
 
 const mapStateToProps = ({ channels }) => ({
   channels: selectFeaturedChannels(channels),
-  title: 'Top Live Channels'
+  title: 'Top Live Channels',
+  className: 'featured-channels-container'
 });
 
 const mapDispatchToProps = dispatch => ({

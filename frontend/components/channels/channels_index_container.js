@@ -6,7 +6,8 @@ import Channels from './channels';
 
 const mapStateToProps = ({ channels }) => ({
   channels: selectAllChannels(channels),
-  title: 'Browse Channels'
+  title: 'Browse Channels',
+  className: 'channels-index-container'
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -15,10 +15,11 @@ export default class Channels extends React.Component {
   render() {
     const channels = this.props.channels;
     const title = this.props.title;
+    const className = this.props.className;
 
     if (channels) {
       return (
-        <section className="channels-container">
+        <section className={className}>
         <h1>{title}</h1>
          <ul className='flex-grid channels'>
            {channels.map(channel => (
