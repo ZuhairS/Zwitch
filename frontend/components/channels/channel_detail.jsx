@@ -35,7 +35,16 @@ export default class ChannelDetail extends React.Component {
 
           <section id='channel-video-container'>
             <ChannelVideo videoUrl={channel.video_url} />
-            <div id='channel-video-description'></div>
+            <div id='channel-video-description'>
+              <div id='channel-info'>
+                <h3>{channel.stream_name}</h3>
+                <p>{channel.stream_description}</p>
+              </div>
+
+              <div id='channel-viewers'>
+                <h4>1 Viewer</h4>
+              </div>
+            </div>
           </section>
 
         </section>
