@@ -7,7 +7,14 @@ class Channel < ApplicationRecord
             presence: true
 
   validates :channel_name,
-            uniqueness: true
+            uniqueness: true,
+            length: { maximum: 20 }
+
+  validates :stream_name,
+            length: { maximum: 48 }
+
+  validates :stream_description,
+            length: { maximum: 200 }
 
   before_validation :ensure_default_channel_name,
                     :ensure_stream_name,

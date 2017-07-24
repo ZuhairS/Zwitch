@@ -38,6 +38,10 @@
         p {
           font-weight: lighter;
           font-size: 12px;
+
+          strong {
+            font-weight: normal;
+          }
         }
 
         .link:hover {

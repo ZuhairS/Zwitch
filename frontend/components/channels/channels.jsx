@@ -15,11 +15,12 @@ export default class Channels extends React.Component {
 
   render() {
     const channels = this.props.channels;
+    const title = this.props.title;
 
     if (channels) {
       return (
         <section className="channels-container">
-         <h1>Top Live Channels</h1>
+         <h1>{title}</h1>
          <ul className='flex-grid channels'>
            {channels.map(channel => (
             <li key={channel.id} className="featured-channel-item">
@@ -37,7 +38,7 @@ export default class Channels extends React.Component {
                 </Link>
                 <p>{'Some viewers on '}
                   <Link className='link' to={`/channels/${channel.id}`}>
-                    {channel.channel_name}
+                    <strong>{channel.channel_name}</strong>
                   </Link>
                 </p>
               </span>

@@ -5,7 +5,8 @@ import { selectFeaturedChannels } from '../../reducers/selectors';
 import Channels from './channels';
 
 const mapStateToProps = ({ channels }) => ({
-  channels: selectFeaturedChannels(channels)
+  channels: selectFeaturedChannels(channels),
+  title: 'Top Live Channels'
 });
 
 const mapDispatchToProps = dispatch => ({
