@@ -23,7 +23,7 @@ export default class Channels extends React.Component {
          <h1>{title}</h1>
          <ul className='flex-grid channels'>
            {channels.map(channel => (
-            <li key={channel.id} className="featured-channel-item">
+            <li key={channel.id} className="channel-item">
 
               <Link to={`/channels/${channel.id}`}>
                 <img

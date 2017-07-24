@@ -4,7 +4,8 @@
 
 .channels-container {
   margin-top: 60px;
-  width: 80%;
+  width: 1140px;
+  // border: 1px solid #4B367C;
 
   h1 {
     display: inline-block;
@@ -13,19 +14,20 @@
     color: white;
     padding: 3px 5px 0 3px;
     margin-bottom: 10px;
+    margin-left: 10px;
     background-color: rgba(75, 54, 124, .8);
   }
 
   .channels {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 
-    .featured-channel-item {
+    .channel-item {
       display: flex;
       flex-direction: column;
       height: auto;
       width: 360px;
-      margin: 0 10px 20px 0;
+      margin: 0 10px 20px 10px;
 
       #channel-info {
         background-color: rgba(75, 54, 124, .9);
