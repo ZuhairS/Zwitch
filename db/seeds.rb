@@ -17,7 +17,7 @@ batman = User.create!(
 batman_channel = Channel.find(batman.id).update_attributes!(
           channel_name: 'Darkest Night',
           video_url: 'https://www.youtube.com/watch?v=pO2_iUkojCY',
-          stream_name: 'Batman: Arkham Knight',
+          stream_name: 'Batman: Arkham Knight - Just another day',
           stream_description: "As the citizens of Gotham flee and criminal gangs take control of the city, Batman uses his own special methods to discover the true purpose behind Scarecrow's plans."
 )
 

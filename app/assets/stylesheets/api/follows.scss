@@ -1,0 +1,19 @@
+
+.follow-container {
+  width: 240px;
+  height: 924px;
+  background-color: #19171C;
+  display: flex;
+  justify-content: center;
+
+  .follow-bar {
+    width: 90%;
+
+    h2 {
+      color: white;
+      padding: 20px 0 13px 0;
+      font-weight: lighter;
+      border-bottom: 1px solid #514B5B;
+    }
+  }
+}

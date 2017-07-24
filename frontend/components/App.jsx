@@ -11,14 +11,18 @@ import AuthFormContainer from './auth_form/auth_form_container';
 import NavbarContainer from './navbar/navbar_container';
 import FeaturedChannelContainer from './channels/featured_channel_container';
 import FeaturedChannelsContainer from './channels/featured_channels_container';
+import FollowContainer from './follow/follow_container';
 
 const App = () => (
   <section className="zwitch">
     <NavbarContainer />
+
+    <Route path='/channels' component={FollowContainer} />
+
     <section className="main-content">
 
-      <FeaturedChannelContainer />
-      <FeaturedChannelsContainer />
+      <Route exact path="/" component={FeaturedChannelContainer} />
+      <Route exact path="/" component={FeaturedChannelsContainer} />
 
       <section className="auth-form-modal">
         <AuthRoute path="/login" component={AuthFormContainer} />
