@@ -2,10 +2,10 @@ import React from 'react';
 import ChannelDetailContainer from './channel_detail_container';
 import { Route } from 'react-router-dom';
 
-const ChannelShow = props => (
+const ChannelShow = () => (
   <section className='channel-detail'>
     <div id='follow-bar-placeholder'></div>
-    <ChannelDetailContainer channelId={props.match.params.channelId}/>
+    <ChannelDetailContainer />
     <div id='chat-placeholder'></div>
   </section>
 );

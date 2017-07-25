@@ -79,7 +79,7 @@ class AuthForm extends React.Component {
     return (
       <Modal isOpen={Boolean(this.modalIsOpen)}
         onRequestClose={this.modalRequestClose}
-        className="Modal"
+        className="Login-Modal"
         overlayClassName="Overlay"
         contentLabel="Sign Up/Log In Modal">
 

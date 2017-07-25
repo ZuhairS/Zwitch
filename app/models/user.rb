@@ -62,7 +62,7 @@ class User < ApplicationRecord
   end
 
   def ensure_default_profile_image
-    self.profile_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500693494/Zwitch_Profile_Image_pxu1oi.png"
+    self.profile_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500693494/Profiles/Zwitch_Profile_Image_pxu1oi.png"
   end
 
   def ensure_session_token_uniqueness

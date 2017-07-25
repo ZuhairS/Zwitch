@@ -5,10 +5,10 @@ import FeaturedChannelsContainer from './featured_channels_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../../util/route_util';
 
-const FeaturedContent = (props) => (
+const FeaturedContent = () => (
   <section className="featured-content">
-    <FeaturedChannelContainer props={props}/>
-    <FeaturedChannelsContainer props={props}/>
+    <FeaturedChannelContainer />
+    <FeaturedChannelsContainer />
 
     <section className="auth-form-modal">
       <AuthRoute path="/login" component={AuthFormContainer} />

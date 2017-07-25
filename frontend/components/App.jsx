@@ -11,6 +11,7 @@ import FeaturedContent from './channels/featured_content';
 import BrowseChannels from './channels/browse_channels';
 import ChannelShow from './channels/channel_show';
 import FollowContainer from './follow/follow_container';
+import ChannelFormContainer from './channels/channel_form_container';
 
 const App = () => (
   <section className="zwitch">

@@ -1,0 +1,13 @@
+.Customize-Modal {
+  margin: 60px auto;
+  width: 1200px;
+  height: 730px;
+  background-color: white;
+  // border: 1px solid blue;
+
+  .customize-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

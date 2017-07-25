@@ -1,16 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ChannelVideo from '../videos/channel_video';
+import ChannelFormContainer from './channel_form_container';
+import Modal from 'react-modal';
 
 export default class ChannelDetail extends React.Component {
 
   constructor(props) {
     super(props);
-    this.channelId = this.props.channelId;
+    this.channelId = props.match.params.channelId;
+    this.state = {
+      openModal: false
+    };
+    this.openCustomizeModal = this.openCustomizeModal.bind(this);
+    this.modalRequestClose = this.modalRequestClose.bind(this);
   }
 
   componentDidMount() {
     this.props.requestSingleChannel(this.channelId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.channelId !== nextProps.match.params.channelId) {
+      this.props.requestSingleChannel(nextProps.match.params.channelId);
+    }
+  }
+
+  openCustomizeModal(event) {
+    event.preventDefault();
+    this.setState({openModal: true});
+  }
+
+  modalRequestClose() {
+    this.setState({openModal: false});
   }
 
   render() {
@@ -45,6 +67,21 @@ export default class ChannelDetail extends React.Component {
                 <h4>1 Viewer</h4>
               </div>
             </div>
+          </section>
+
+
+          <button onClick={this.openCustomizeModal} id='open-customize-modal'>
+            <h3>Customize Channel</h3>
+          </button>
+
+          <section className='channel-customize-modal'>
+            <Modal isOpen={this.state.openModal}
+              onRequestClose={this.modalRequestClose}
+              className="Customize-Modal"
+              overlayClassName="Overlay"
+              contentLabel="Customize Channel Modal">
+               <ChannelFormContainer />
+             </Modal>
           </section>
 
         </section>
