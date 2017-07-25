@@ -59,7 +59,7 @@ export default class ChannelForm extends React.Component {
         <section className='customize-form-container'>
           <div id='close-form'>
             <button onClick={this.props.modalRequestClose}>
-              <FontAwesome name='window-close' size='2x' id='form-close'/>
+              <FontAwesome name='window-close' size='4x' id='form-close'/>
             </button>
           </div>
           <header className='customize-title-errors'>
@@ -73,7 +73,7 @@ export default class ChannelForm extends React.Component {
             <div className='left-form'>
 
               <div id='text-form'>
-                <label htmlFor="channel-name-box">Channel Name</label>
+                <label>Channel Name
                 <input type="text"
                   id="channel-name-box"
                   value={this.state.channel_name}
@@ -81,8 +81,9 @@ export default class ChannelForm extends React.Component {
                   className="customize-form-input"
                   maxLength="20"
                   />
+                </label>
 
-                <label htmlFor="stream-title-box">Stream Title</label>
+                <label>Stream Title
                 <input type="text"
                   id="stream-title-box"
                   value={this.state.stream_name}
@@ -90,26 +91,29 @@ export default class ChannelForm extends React.Component {
                   className="customize-form-input"
                   maxLength="48"
                   />
+                </label>
 
-                <label htmlFor="stream-description-box">Stream Description</label>
-                <input type="text"
+                <label><h3>Stream Description</h3>
+                <textarea
                   id="stream-description-box"
                   value={this.state.stream_description}
                   onChange={this.update('stream_description')}
                   className="customize-form-input"
                   maxLength="200"
                   />
+                </label>
               </div>
 
               <div id='video-form'>
-                <label htmlFor="stream-video-box">Stream Description</label>
+                <label>YouTube Video URL
                 <input type="text"
                   id="stream-video-box"
-                  value={this.state.stream_description}
+                  value={this.state.video_url}
                   onChange={this.update('video_url')}
                   className="customize-form-input"
                   maxLength="200"
                   />
+                </label>
 
                 <div id='embedded-video'></div>
               </div>
@@ -119,17 +123,19 @@ export default class ChannelForm extends React.Component {
 
               <div id='image-form'>
                 <label htmlFor="profile-image-box">Profile Image</label>
+                <img src={this.state.profile_image_url} />
               </div>
 
               <div id='banner-form'>
                 <label htmlFor="banner-image-box">Banner Image</label>
+                <img src={this.state.banner_image_url} />
               </div>
 
             </div>
           </section>
           <div className='customize-submit-cancel'>
-            <button id='submit-form'></button>
-            <button id='cancel-form'></button>
+            <button id='submit-form'>Save Changes</button>
+            <button onClick={this.props.modalRequestClose} id='cancel-form'>Cancel</button>
           </div>
         </section>
       );

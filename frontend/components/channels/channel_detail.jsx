@@ -75,7 +75,7 @@ export default class ChannelDetail extends React.Component {
           </button>
 
           <section className='channel-customize-modal'>
-            <Modal isOpen={true}
+            <Modal isOpen={this.state.openModal}
               onRequestClose={this.modalRequestClose}
               className="Customize-Modal"
               overlayClassName="Overlay"
