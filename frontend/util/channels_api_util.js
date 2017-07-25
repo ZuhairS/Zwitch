@@ -25,3 +25,11 @@ export const fetchFeaturedChannel = () => (
     url: 'api/featured'
   })
 );
+
+export const updateChannel = channel => (
+  $.ajax({
+    type: 'PATCH',
+    url: `api/channels/${channel.id}`,
+    data: {channel}
+  })
+);

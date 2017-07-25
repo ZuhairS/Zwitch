@@ -33,10 +33,17 @@
   }
 
   .channels {
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: flex-start;
+    // flex-wrap: wrap;
+    // width: 100%;
+    // justify-content: flex-start;
     // border: 1px solid orange;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
 
     .channel-item {
       display: flex;
@@ -44,6 +51,9 @@
       height: auto;
       width: 360px;
       margin: 0 10px 20px 10px;
+      -webkit-box-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
 
       #channel-info {
         background-color: rgba(75, 54, 124, .9);
