@@ -6,7 +6,7 @@ export default class ChannelDetail extends React.Component {
 
   constructor(props) {
     super(props);
-    this.channelId = this.props.match.params.channelId;
+    this.channelId = this.props.channelId;
   }
 
   componentDidMount() {
