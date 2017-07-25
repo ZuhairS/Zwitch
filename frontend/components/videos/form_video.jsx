@@ -2,7 +2,7 @@ import React from 'react';
 import YouTube from 'react-youtube';
 import { youtubeIdExtractor } from '../../util/video_util';
 
-export default class FeaturedVideo extends React.Component {
+export default class ChannelVideo extends React.Component {
 
   constructor(props) {
     super(props);
@@ -22,11 +22,11 @@ export default class FeaturedVideo extends React.Component {
     }
 
     const options = {
-        height: '1080',
-        width: '1920',
+        height: '720',
+        width: '1280',
         playerVars: {
           autoplay: 0,
-          controls: 2,
+          controls: 1,
           disablekb: 1,
           modestbranding: 1,
           rel: 0,
@@ -37,7 +37,7 @@ export default class FeaturedVideo extends React.Component {
 
     if (videoId) {
       return(
-        <YouTube videoId={videoId} id="featured"
+        <YouTube videoId={videoId} id="form-video"
           opts={options} onEnd={this.onEnd}/>
       );
     } else {

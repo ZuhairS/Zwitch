@@ -39,7 +39,7 @@ spidey = User.create!(
 
 spidey_channel = Channel.find(spidey.id).update_attributes!(
           channel_name: 'Mahvel',
-          video_url: 'https://www.youtube.com/watch?v=K4zm30yeHHE',
+          video_url: 'https://www.youtube.com/watch?v=8pR0o2fGyHg',
           stream_name: 'Spider-Man E3 Gameplay',
           stream_description: 'Check out the gameplay demo of Marvel’s Spider-Man shown at the E3 2017.'
 )

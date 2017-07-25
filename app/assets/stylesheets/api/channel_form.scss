@@ -1,5 +1,5 @@
 .Customize-Modal {
-  margin: 60px auto;
+  margin: 5% auto;
   width: 1200px;
   height: 730px;
   background-color: white;
@@ -9,5 +9,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    #close-form {
+      display: flex;
+      justify-content: flex-end;
+      // border: 1px solid black;
+    }
   }
 }

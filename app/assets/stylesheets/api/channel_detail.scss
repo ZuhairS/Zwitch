@@ -15,7 +15,7 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-    background-color: #EBEAEB;
+    background-color: #faf9fa;
     border: 1px solid #E0E0E0;
     color: #7957C8;
     font-weight: lighter;
@@ -36,6 +36,7 @@
         left: 50px;
         width: auto;
         height: 75px;
+        border: 2px solid #7957C8;
       }
     }
 
@@ -113,7 +114,7 @@
       justify-content: space-between;
       align-items: flex-start;
       color: #7957C8;
-      background-color: #FAF9FA;
+      background-color: #faf9fa;
       border: 1px solid #E0E0E0;
 
       #channel-info {

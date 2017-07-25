@@ -22,8 +22,8 @@ export default class ChannelVideo extends React.Component {
     }
 
     const options = {
-        // height: '720',
-        // width: '1280',
+        height: '1080',
+        width: '1920',
         playerVars: {
           autoplay: 0,
           controls: 2,
