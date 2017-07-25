@@ -42,7 +42,7 @@ export default class ChannelVideo extends React.Component {
       );
     } else {
       return (
-        <div id='no-vid'></div>
+        <div className='no-vid'></div>
       );
     }
   }

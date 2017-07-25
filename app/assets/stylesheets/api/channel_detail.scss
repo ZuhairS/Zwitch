@@ -20,6 +20,7 @@
     color: #7957C8;
     font-weight: lighter;
     margin-top: 50px;
+    margin-bottom: 25px;
     width: 100%;
     // padding: 20px 0;
     // height: 25px;
@@ -31,7 +32,7 @@
 
       img {
         position: absolute;
-        top: -44px;
+        top: -40px;
         left: 50px;
         width: auto;
         height: 75px;
@@ -94,7 +95,8 @@
       height:auto;
       overflow:hidden;
 
-      #channel-video, #no-vid {
+      #channel-video, .no-vid {
+        // border: 1px solid #4B367C;
         position:absolute;
       	top:0;
       	left:0;
