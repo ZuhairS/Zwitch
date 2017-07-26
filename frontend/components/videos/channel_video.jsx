@@ -28,7 +28,7 @@ export default class ChannelVideo extends React.Component {
           autoplay: 0,
           controls: 2,
           disablekb: 1,
-          modestbranding: 1,
+          modestbranding: 0,
           rel: 0,
           iv_load_policy: 3,
           showinfo: 0

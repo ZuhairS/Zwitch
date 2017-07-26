@@ -15,6 +15,7 @@ import ChannelFormContainer from './channels/channel_form_container';
 
 const App = () => (
   <section className="zwitch">
+    <Route component={ScrollToTop} />
     <NavbarContainer />
     <div id='navbar-placeholder'></div>
     <Route path='/channels' component={FollowContainer} />
@@ -26,5 +27,11 @@ const App = () => (
     </Switch>
   </section>
 );
+
+// Allows scrolling back to top on visiting new pages.
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
 
 export default App;

@@ -1,6 +1,7 @@
 import React from 'react';
 import merge from 'lodash/merge';
 import FontAwesome from 'react-fontawesome';
+import { youtubeIdExtractor } from '../../util/video_util';
 
 export default class ChannelForm extends React.Component {
   constructor(props) {
@@ -111,30 +112,47 @@ export default class ChannelForm extends React.Component {
                   value={this.state.video_url}
                   onChange={this.update('video_url')}
                   className="customize-form-input"
-                  maxLength="200"
                   />
                 </label>
 
-                <div id='embedded-video'></div>
+                <div id='embedded-video-image'>
+                  <img
+                    src={`https://img.youtube.com/vi/${youtubeIdExtractor(this.state.video_url)}/maxresdefault.jpg`}
+                    />
+                </div>
               </div>
 
             </div>
             <div className='right-form'>
 
               <div id='image-form'>
-                <label htmlFor="profile-image-box">Profile Image</label>
+                <label htmlFor="profile-image-box">Profile Image
+                  <input type="text"
+                    id="profile-image-box"
+                    value={this.state.profile_image_url}
+                    onChange={this.update('profile_image_url')}
+                    className="customize-form-input"
+                    />
+                </label>
                 <img src={this.state.profile_image_url} />
               </div>
 
               <div id='banner-form'>
-                <label htmlFor="banner-image-box">Banner Image</label>
+                <label htmlFor="banner-image-box">Banner Image
+                  <input type="text"
+                    id="banner-image-box"
+                    value={this.state.banner_image_url}
+                    onChange={this.update('banner_image_url')}
+                    className="customize-form-input"
+                    />
+                </label>
                 <img src={this.state.banner_image_url} />
               </div>
 
             </div>
           </section>
           <div className='customize-submit-cancel'>
-            <button id='submit-form'>Save Changes</button>
+            <button onClick={this.handleSubmit} id='submit-form'>Update Channel</button>
             <button onClick={this.props.modalRequestClose} id='cancel-form'>Cancel</button>
           </div>
         </section>
