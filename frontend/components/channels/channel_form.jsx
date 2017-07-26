@@ -10,6 +10,7 @@ export default class ChannelForm extends React.Component {
     this.state = props.channel;
 
     this.clearErrors = this.clearErrors.bind(this);
+    this.modalRequestClose = this.modalRequestClose.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -49,6 +50,11 @@ export default class ChannelForm extends React.Component {
     };
   }
 
+  modalRequestClose() {
+    this.props.clearErrors();
+    this.props.modalRequestClose();
+  }
+
   render() {
 
     let videoThumbnailUrlId = youtubeIdExtractor(this.state.video_url);
@@ -63,7 +69,7 @@ export default class ChannelForm extends React.Component {
       return (
         <section className='customize-form-container'>
           <div id='close-form'>
-            <button onClick={this.props.modalRequestClose}>
+            <button onClick={this.modalRequestClose}>
               <FontAwesome name='window-close' size='4x' id='form-close'/>
             </button>
           </div>
@@ -157,7 +163,7 @@ export default class ChannelForm extends React.Component {
           </section>
           <div className='customize-submit-cancel'>
             <button onClick={this.handleSubmit} id='submit-form'>Update Channel</button>
-            <button onClick={this.props.modalRequestClose} id='cancel-form'>Cancel</button>
+            <button onClick={this.modalRequestClose} id='cancel-form'>Cancel</button>
           </div>
         </section>
       );

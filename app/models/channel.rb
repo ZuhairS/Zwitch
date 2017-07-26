@@ -4,6 +4,7 @@ class Channel < ApplicationRecord
             :owner_id,
             :stream_name,
             :banner_image_url,
+            :profile_image_url,
             presence: true
 
   validates :channel_name,
@@ -18,7 +19,8 @@ class Channel < ApplicationRecord
 
   before_validation :ensure_default_channel_name,
                     :ensure_stream_name,
-                    :ensure_default_banner_image
+                    :ensure_default_banner_image,
+                    :ensure_default_profile_image
 
   belongs_to :owner,
     class_name: "User",
@@ -46,11 +48,15 @@ class Channel < ApplicationRecord
   end
 
   def ensure_stream_name
-    self.stream_name ||= "#{self.channel_name}'s Stream"
+    self.stream_name = self.stream_name == "" ? "#{self.channel_name}'s Stream" : self.stream_name
+  end
+
+  def ensure_default_profile_image
+    self.profile_image_url = self.profile_image_url == "" ? "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500693494/Profiles/Zwitch_Profile_Image_pxu1oi.png" : self.profile_image_url
   end
 
   def ensure_default_banner_image
-    self.banner_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/v1500511693/zwitch_default_banner_img_vtrk3t.jpg"
+    self.banner_image_url = self.banner_image_url == "" ?  "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500698080/Banners/zwitch_default_banner_img2_rghxd7.png" : self.banner_image_url
   end
 
 end

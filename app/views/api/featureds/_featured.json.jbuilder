@@ -3,5 +3,5 @@ json.extract! channel, :id,
                        :owner_id,
                        :video_url,
                        :stream_name,
+                       :profile_image_url,
                        :stream_description
-json.profile_image_url channel.owner.profile_image_url

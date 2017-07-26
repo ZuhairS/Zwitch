@@ -5,7 +5,6 @@ class User < ApplicationRecord
   validates :username,
             :password_digest,
             :session_token,
-            :profile_image_url,
             presence: true
 
   validates :username,
@@ -16,8 +15,7 @@ class User < ApplicationRecord
             length: { minimum: 6 },
             allow_nil: :true
 
-  after_initialize :ensure_session_token,
-                   :ensure_default_profile_image
+  after_initialize :ensure_session_token
 
   before_validation :ensure_session_token_uniqueness
 
@@ -59,10 +57,6 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
-  end
-
-  def ensure_default_profile_image
-    self.profile_image_url ||= "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500693494/Profiles/Zwitch_Profile_Image_pxu1oi.png"
   end
 
   def ensure_session_token_uniqueness

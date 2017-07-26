@@ -28,6 +28,7 @@ class Api::ChannelsController < ApplicationController
               :video_url,
               :stream_name,
               :stream_description,
+              :profile_image_url,
               :banner_image_url)
   end
 

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170720000101) do
     t.string "video_url", default: ""
     t.string "stream_name", null: false
     t.text "stream_description", default: ""
+    t.string "profile_image_url", null: false
     t.string "banner_image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -30,7 +31,6 @@ ActiveRecord::Schema.define(version: 20170720000101) do
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
-    t.string "profile_image_url", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false

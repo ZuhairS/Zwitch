@@ -23,7 +23,7 @@ const ChannelReducer = (state = defaultState(), action) => {
     case RECEIVE_FEATURED_CHANNEL:
       return merge({}, state, { featuredChannel: action.channel });
     case EDIT_CHANNEL:
-      return merge({}, state, { selectedChannel: action.channel })
+      return merge({}, state, { selectedChannel: action.channel });
     case RECEIVE_ERRORS:
       return Object.assign({}, state, { errors: action.errors });
     case CLEAR_ERRORS:

@@ -6,6 +6,7 @@ class CreateChannels < ActiveRecord::Migration[5.1]
       t.string :video_url, default: ""
       t.string :stream_name, null: false
       t.text :stream_description, default: ""
+      t.string :profile_image_url, null: false
       t.string :banner_image_url, null: false
 
       t.timestamps

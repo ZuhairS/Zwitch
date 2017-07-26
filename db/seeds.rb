@@ -10,15 +10,15 @@ guest_user = User.create!(username: "Guest", password: "guestpassword")
 
 batman = User.create!(
           username: "xXxDarkKnightxXx",
-          password: "superdarkgrumpster",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775137/Profiles/image_hzhibk.jpg'
+          password: "superdarkgrumpster"
 )
 
 batman_channel = Channel.find(batman.id).update_attributes!(
           channel_name: 'Darkest Night',
           video_url: 'https://www.youtube.com/watch?v=pO2_iUkojCY',
           stream_name: 'Batman: Arkham Knight - Just another day',
-          stream_description: "As the citizens of Gotham flee and criminal gangs take control of the city, Batman uses his own special methods to discover the true purpose behind Scarecrow's plans."
+          stream_description: "As the citizens of Gotham flee and criminal gangs take control of the city, Batman uses his own special methods to discover the true purpose behind Scarecrow's plans.",
+          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775137/Profiles/image_hzhibk.jpg'
 )
 
 shadow = User.create!(
@@ -33,64 +33,64 @@ deryl = User.create!(
 
 spidey = User.create!(
           username: "Excelsior",
-          password: "gomahvel",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775111/Profiles/78244_g4ueq0.jpg'
+          password: "gomahvel"
 )
 
 spidey_channel = Channel.find(spidey.id).update_attributes!(
           channel_name: 'Mahvel',
           video_url: 'https://www.youtube.com/watch?v=8pR0o2fGyHg',
           stream_name: 'Spider-Man E3 Gameplay',
-          stream_description: 'Check out the gameplay demo of Marvel’s Spider-Man shown at the E3 2017.'
+          stream_description: 'Check out the gameplay demo of Marvel’s Spider-Man shown at the E3 2017.',
+          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775111/Profiles/78244_g4ueq0.jpg'
 )
 
 john = User.create!(
           username: "potato monster",
-          password: "potatoes",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775093/Profiles/john-freeman_jezgoi.png'
+          password: "potatoes"
 )
 
 john_channel = Channel.find(john.id).update_attributes!(
           channel_name: 'John Freeman',
           video_url: 'https://www.youtube.com/watch?v=OHxyZaZlaOs',
-          stream_name: 'Life is full of half-life consequences...', stream_description: 'When life gives you lemons, make lemon grenades. Or watch my stream. Either works.'
+          stream_name: 'Life is full of half-life consequences...', stream_description: 'When life gives you lemons, make lemon grenades. Or watch my stream. Either works.',
+          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775093/Profiles/john-freeman_jezgoi.png'
 )
 
 dio = User.create!(
           username: "Dio",
-          password: "itisidio",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775126/Profiles/103_izqxma.png'
+          password: "itisidio"
 )
 
 dio_channel = Channel.find(dio.id).update_attributes!(
           channel_name: 'It is I, Dio!',
           video_url: 'https://www.youtube.com/watch?v=hATyU-bb1gc',
           stream_name: "JoJo's Bizarre Adventure: All-Star Battle - DIO",
-          stream_description: "Channel dedicated to DIO, the Evil Incarnate, the main antagonist of JoJo's Bizarre Adventure."
+          stream_description: "Channel dedicated to DIO, the Evil Incarnate, the main antagonist of JoJo's Bizarre Adventure.",
+          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775126/Profiles/103_izqxma.png'
 )
 
 zelda = User.create!(
           username: "Mogambo",
-          password: "jambojambo",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500851793/Profiles/25.jpg'
+          password: "jambojambo"
 )
 
 zelda_channel = Channel.find(zelda.id).update_attributes!(
           channel_name: 'For Heart and Soul',
           video_url: 'https://www.youtube.com/watch?v=1rPxiXXxftE',
           stream_name: "The Legend of Zelda: Breath of the Wild",
-          stream_description: "Enjoy the beauty of the wilderness in Breath of the Wild."
+          stream_description: "Enjoy the beauty of the wilderness in Breath of the Wild.",
+          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500851793/Profiles/25.jpg'
 )
 
 inside = User.create!(
           username: "mackey",
-          password: "mackster12",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500850453/Profiles/mlwVgO2L.jpg'
+          password: "mackster12"
 )
 
 inside_channel = Channel.find(inside.id).update_attributes!(
           channel_name: 'Mind Channel',
           video_url: 'https://www.youtube.com/watch?v=NP4AuKdb_dA',
           stream_name: 'Inside: Complete Walkthrough',
-          stream_description: 'Full Walkthrough for the game Inside. All secrets, all collectables, both endings. Enjoy!'
+          stream_description: 'Full Walkthrough for the game Inside. All secrets, all collectables, both endings. Enjoy!',
+          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500850453/Profiles/mlwVgO2L.jpg'
 )
