@@ -4,8 +4,9 @@ import { withRouter } from 'react-router-dom';
 
 import ChannelDetail from './channel_detail';
 
-const mapStateToProps = ({ channels }) => ({
-  channel: channels.selectedChannel
+const mapStateToProps = state => ({
+  channel: state.channels.selectedChannel,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

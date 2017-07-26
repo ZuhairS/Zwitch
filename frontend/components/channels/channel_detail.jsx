@@ -38,6 +38,24 @@ export default class ChannelDetail extends React.Component {
   render() {
     const channel = this.props.channel;
 
+    let videoContainer;
+
+    if (channel.video_url) {
+      videoContainer = <ChannelVideo videoUrl={channel.video_url} />;
+    } else {
+      videoContainer = <span><img src={channel.banner_image_url} /></span>;
+    }
+
+    let channelButton;
+
+    if (channel.owner_name === this.props.currentUser.username) {
+      channelButton = <button onClick={this.openCustomizeModal} id='open-customize-modal'>
+        Customize Channel
+      </button>;
+    } else {
+      channelButton = <button id='follow-button'>Follow</button>;
+    }
+
     if (channel) {
       return (
         <section className='channel-detail-container'>
@@ -50,13 +68,13 @@ export default class ChannelDetail extends React.Component {
             <h3>{channel.owner_name}</h3>
             <h3>Follows: 0</h3>
             <h3>Following: 0</h3>
-            <div id='follow-button-container'>
-              <button id='follow-button'>Follow</button>
+            <div id='follow-customize-button-container'>
+              { channelButton }
             </div>
           </nav>
 
           <section id='channel-video-container'>
-            <ChannelVideo videoUrl={channel.video_url} />
+            {videoContainer}
             <div id='channel-video-description'>
               <div id='channel-info'>
                 <h3>{channel.stream_name}</h3>
@@ -68,11 +86,6 @@ export default class ChannelDetail extends React.Component {
               </div>
             </div>
           </section>
-
-
-          <button onClick={this.openCustomizeModal} id='open-customize-modal'>
-            <h3>Customize Channel</h3>
-          </button>
 
           <section className='channel-customize-modal'>
             <Modal isOpen={this.state.openModal}

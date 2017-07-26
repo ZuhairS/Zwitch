@@ -10,7 +10,7 @@ class CreateChannels < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    
+
     add_index :channels, :channel_name, unique: true
     add_index :channels, :owner_id, unique: true
   end

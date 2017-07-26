@@ -78,7 +78,7 @@ zelda = User.create!(
 zelda_channel = Channel.find(zelda.id).update_attributes!(
           channel_name: 'For Heart and Soul',
           video_url: 'https://www.youtube.com/watch?v=1rPxiXXxftE',
-          stream_name: "The Legend of Zelda: Breath of the Wild Trailer",
+          stream_name: "The Legend of Zelda: Breath of the Wild",
           stream_description: "Enjoy the beauty of the wilderness in Breath of the Wild."
 )
 

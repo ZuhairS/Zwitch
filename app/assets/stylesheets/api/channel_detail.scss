@@ -34,7 +34,7 @@
         position: absolute;
         top: -40px;
         left: 50px;
-        width: auto;
+        width: 75px;
         height: 75px;
         border: 2px solid #7957C8;
       }
@@ -58,7 +58,7 @@
       border: 0;
     }
 
-    #follow-button-container {
+    #follow-customize-button-container {
       display: flex;
       justify-content: flex-end;
       // border: 1px solid black;
@@ -96,7 +96,7 @@
       height:auto;
       overflow:hidden;
 
-      #channel-video, .no-vid {
+      #channel-video, .no-vid, img {
         // border: 1px solid #4B367C;
         position:absolute;
       	top:0;
