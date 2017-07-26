@@ -3,9 +3,9 @@ class CreateChannels < ActiveRecord::Migration[5.1]
     create_table :channels do |t|
       t.string :channel_name, null: false
       t.integer :owner_id, null: false
-      t.string :video_url
+      t.string :video_url, default: ""
       t.string :stream_name, null: false
-      t.text :stream_description
+      t.text :stream_description, default: ""
       t.string :banner_image_url, null: false
 
       t.timestamps

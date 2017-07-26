@@ -48,7 +48,7 @@ export default class ChannelDetail extends React.Component {
 
     let channelButton;
 
-    if (channel.owner_name === this.props.currentUser.username) {
+    if (this.props.currentUser && channel.owner_name === this.props.currentUser.username) {
       channelButton = <button onClick={this.openCustomizeModal} id='open-customize-modal'>
         Customize Channel
       </button>;

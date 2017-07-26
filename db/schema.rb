@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20170720000101) do
   create_table "channels", force: :cascade do |t|
     t.string "channel_name", null: false
     t.integer "owner_id", null: false
-    t.string "video_url"
+    t.string "video_url", default: ""
     t.string "stream_name", null: false
-    t.text "stream_description"
+    t.text "stream_description", default: ""
     t.string "banner_image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

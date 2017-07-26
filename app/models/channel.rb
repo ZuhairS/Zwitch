@@ -26,16 +26,16 @@ class Channel < ApplicationRecord
     foreign_key: :owner_id
 
   def self.all_channels
-    Channel.where.not(video_url: :null)
+    Channel.where.not(video_url: "")
   end
 
   def self.featured_channels
-    Channel.where.not(video_url: :null).limit(6)
+    Channel.where.not(video_url: "").limit(6)
   end
 
   def self.featured_channel
     # Selects random num fron playing channel count and then selects first result.
-    playing_channels = Channel.where.not(video_url: :null)
+    playing_channels = Channel.where.not(video_url: "")
     playing_channels.offset(rand(playing_channels.count)).first
   end
 

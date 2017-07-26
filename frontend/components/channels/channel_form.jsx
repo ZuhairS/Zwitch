@@ -53,7 +53,7 @@ export default class ChannelForm extends React.Component {
 
     let videoThumbnailUrlId = youtubeIdExtractor(this.state.video_url);
 
-    let videoThumbnailUrl = videoThumbnailUrlId ? `https://img.youtube.com/vi/${youtubeIdExtractor(this.state.video_url)}/maxresdefault.jpg` : "";
+    let videoThumbnailUrl = videoThumbnailUrlId ? `https://img.youtube.com/vi/${videoThumbnailUrlId}/maxresdefault.jpg` : "";
 
     if (!this.state) {
       this.state = this.props.channel;
@@ -101,10 +101,11 @@ export default class ChannelForm extends React.Component {
                 <label><h3>Stream Description</h3>
                 <textarea
                   id="stream-description-box"
+                  value={this.state.stream_description}
                   onChange={this.update('stream_description')}
                   className="customize-form-input"
                   maxLength="200"
-                  >{this.state.stream_description}</textarea>
+                  />
                 </label>
               </div>
 
@@ -112,7 +113,7 @@ export default class ChannelForm extends React.Component {
                 <label>YouTube Video URL
                 <input type="text"
                   id="stream-video-box"
-                  value={this.state.video_url ? this.state.video_url : ""}
+                  value={this.state.video_url}
                   onChange={this.update('video_url')}
                   className="customize-form-input"
                   />
