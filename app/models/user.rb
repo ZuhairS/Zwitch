@@ -27,6 +27,15 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     dependent: :destroy
 
+  has_many :follows,
+    class_name: "Follow",
+    primary_key: :id,
+    foreign_key: :follower_id
+
+  has_many :followed_channels,
+    source: :followed_channel,
+    through: :follows
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return user if user && user.is_password?(password)

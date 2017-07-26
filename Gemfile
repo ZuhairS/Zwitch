@@ -34,6 +34,9 @@ gem 'jquery-rails'
 # For Twitch Logo
 gem 'font-awesome-sass'
 
+# For secure APIs
+gem 'figaro'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

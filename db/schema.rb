@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720000101) do
+ActiveRecord::Schema.define(version: 20170726180929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,32 @@ ActiveRecord::Schema.define(version: 20170720000101) do
     t.datetime "updated_at", null: false
     t.index ["channel_name"], name: "index_channels_on_channel_name", unique: true
     t.index ["owner_id"], name: "index_channels_on_owner_id", unique: true
+  end
+
+  create_table "chat_messages", force: :cascade do |t|
+    t.integer "chatroom_id", null: false
+    t.integer "user_id", null: false
+    t.string "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_chat_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_chat_messages_on_user_id"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.integer "channel_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["channel_id"], name: "index_chatrooms_on_channel_id", unique: true
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "follower_id", null: false
+    t.integer "followed_channel_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_channel_id"], name: "index_follows_on_followed_channel_id"
+    t.index ["follower_id"], name: "index_follows_on_follower_id"
   end
 
   create_table "users", force: :cascade do |t|

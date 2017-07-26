@@ -1,7 +1,7 @@
 class Channel < ApplicationRecord
 
   validates :channel_name,
-            :owner_id,
+            :owner,
             :stream_name,
             :banner_image_url,
             :profile_image_url,
@@ -26,6 +26,15 @@ class Channel < ApplicationRecord
     class_name: "User",
     primary_key: :id,
     foreign_key: :owner_id
+
+  has_many :follows,
+    class_name: "Follow",
+    primary_key: :id,
+    foreign_key: :followed_channel_id
+
+  has_many :followers,
+    source: :follower,
+    through: :follows
 
   def self.all_channels
     Channel.where.not(video_url: "")
