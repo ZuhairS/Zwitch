@@ -7,15 +7,15 @@ export const fetchAllFollows = () => (
 
 export const createFollow = follow => (
   $.ajax({
-    type: 'DELETE',
+    type: 'POST',
     url: `api/follows`,
     data: { follow }
   })
 );
 
-export const destroyFollow = followId => (
+export const destroyFollow = channelId => (
   $.ajax({
     type: 'DELETE',
-    url: `api/follows/${followId}`
+    url: `api/follows/${channelId}`
   })
 );

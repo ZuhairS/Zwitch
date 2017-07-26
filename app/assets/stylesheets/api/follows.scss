@@ -12,11 +12,12 @@
   // z-index: 1;
   background-color: #19171C;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  color: white;
   // margin-right: 30px;
   background-attachment: fixed;
 
-  .follow-bar {
+  .follow-header {
     width: 90%;
 
     h2 {
@@ -24,6 +25,24 @@
       padding: 20px 0 13px 0;
       font-weight: lighter;
       border-bottom: 1px solid #514B5B;
+    }
+  }
+
+  .follow-list {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .follow-item {
+      display: flex;
+      justify-content: space-between;
+
+      .follow-profile-img {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 }

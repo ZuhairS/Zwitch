@@ -14,10 +14,13 @@ export default class ChannelDetail extends React.Component {
     };
     this.openCustomizeModal = this.openCustomizeModal.bind(this);
     this.modalRequestClose = this.modalRequestClose.bind(this);
+    this.handleFollow = this.handleFollow.bind(this);
+    this.handleUnfollow = this.handleUnfollow.bind(this);
   }
 
   componentDidMount() {
     this.props.requestSingleChannel(this.channelId);
+    this.props.requestFollows();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -33,6 +36,19 @@ export default class ChannelDetail extends React.Component {
 
   modalRequestClose() {
     this.setState({openModal: false});
+  }
+
+  handleFollow(event) {
+    event.preventDefault();
+    this.props.createFollow({
+      follower_id: this.props.currentUser.id,
+      followed_channel_id: this.channelId
+    });
+  }
+
+  handleUnfollow(event) {
+    event.preventDefault();
+    this.props.deleteFollow(this.channelId);
   }
 
   render() {
@@ -52,8 +68,10 @@ export default class ChannelDetail extends React.Component {
       channelButton = <button onClick={this.openCustomizeModal} id='open-customize-modal'>
         Customize Channel
       </button>;
+    } else if (this.props.currentUser && this.props.followIds.includes(parseInt(this.channelId))) {
+      channelButton = <button onClick={this.handleUnfollow} id='follow-button'>Unfollow</button>;
     } else {
-      channelButton = <button id='follow-button'>Follow</button>;
+      channelButton = <button onClick={this.handleFollow} id='follow-button'>Follow</button>;
     }
 
     if (channel) {

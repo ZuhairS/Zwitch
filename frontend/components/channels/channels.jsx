@@ -41,10 +41,8 @@ export default class Channels extends React.Component {
                   </Link>
                 </p>
               </span>
-
             </li>
-          )
-        )}
+          ))}
          </ul>
        </section>
       );

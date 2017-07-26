@@ -9,6 +9,7 @@ class Api::FollowsController < ApplicationController
     @follow = current_user.follows.new(follow_params)
 
     if @follow.save!
+      @follows = current_user.follows
       render "api/follows/index"
     else
       render json: @follow.errors.full_messages, status: 422
@@ -16,14 +17,15 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @follow = current_user.follows.find(params[:id])
+    @follow = current_user.follows.find_by_followed_channel_id(params[:id])
     @follow.destroy
+    @follows = current_user.follows
     render "api/follows/index"
   end
 
   private
 
   def follow_params
-    params.require(:follow).permit(:follower_id, :follow_channel_id)
+    params.require(:follow).permit(:follower_id, :followed_channel_id)
   end
 end
