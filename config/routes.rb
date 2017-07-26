@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :channels, only: [:index, :show, :update]
     resources :featured_channels, only: :index
     resource :featured, only: :show
+    resources :follows, only: [:index, :create, :destroy]
   end
 
   root to: 'static_pages#root'
