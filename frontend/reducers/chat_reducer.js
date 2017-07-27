@@ -8,7 +8,7 @@ const ChatReducer = (state = {}, action) => {
     case RECEIVE_CHATROOM:
       return merge({}, action.chatroom);
     case RECEIVE_CHAT_MESSAGE:
-      return merge({}, state, {[action.follows.id]: action.follows});
+      return merge({}, state, {[action.chatMessage.id]: action.chatMessage});
     default:
       return state;
   }

@@ -1,10 +1,12 @@
 class Api::ChatMessagesController < ApplicationController
 
+
+
   def create
     @chat_message = ChatMessage.new(chat_message_params)
 
     if @chat_message.save!
-      render "api/chat_message/chat_message"
+      render "api/chat_messages/show"
     else
       render json: @chat_message.errors.full_messages, status: 422
     end

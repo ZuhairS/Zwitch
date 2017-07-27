@@ -13,8 +13,8 @@ export const receiveChatMessage = chatMessage => ({
   chatMessage
 });
 
-export const requestChatroom = () => dispatch => (
-  APIUtil.fetchChatroom().then(chatroom => dispatch(receiveChatroom(chatroom)))
+export const requestChatroom = channelId => dispatch => (
+  APIUtil.fetchChatroom(channelId).then(chatroom => dispatch(receiveChatroom(chatroom)))
 );
 
 export const createChatMessage = chatMessage => dispatch => (
