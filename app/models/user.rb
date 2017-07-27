@@ -27,6 +27,8 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     dependent: :destroy
 
+  has_many :chat_messages
+
   has_many :follows,
     class_name: "Follow",
     primary_key: :id,

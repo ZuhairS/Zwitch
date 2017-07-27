@@ -22,10 +22,14 @@ class Channel < ApplicationRecord
                     :ensure_default_banner_image,
                     :ensure_default_profile_image
 
+  after_create :ensure_chatroom
+
   belongs_to :owner,
     class_name: "User",
     primary_key: :id,
     foreign_key: :owner_id
+
+  has_one :chatroom
 
   has_many :follows,
     class_name: "Follow",
@@ -66,6 +70,10 @@ class Channel < ApplicationRecord
 
   def ensure_default_banner_image
     self.banner_image_url = self.banner_image_url == "" ?  "http://res.cloudinary.com/zwitch/image/upload/q_100/v1500698080/Banners/zwitch_default_banner_img2_rghxd7.png" : self.banner_image_url
+  end
+
+  def ensure_chatroom
+    self.chatroom ||= Chatroom.create!(channel_id: self.id)
   end
 
 end
