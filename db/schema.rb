@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20170726180929) do
     t.string "channel_name", null: false
     t.integer "owner_id", null: false
     t.string "video_url", default: ""
-    t.string "stream_name", null: false
+    t.string "stream_name", default: "", null: false
     t.text "stream_description", default: ""
-    t.string "profile_image_url", null: false
-    t.string "banner_image_url", null: false
+    t.string "profile_image_url", default: "", null: false
+    t.string "banner_image_url", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["channel_name"], name: "index_channels_on_channel_name", unique: true
