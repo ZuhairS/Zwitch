@@ -11,6 +11,7 @@ import FeaturedContent from './channels/featured_content';
 import BrowseChannels from './channels/browse_channels';
 import ChannelShow from './channels/channel_show';
 import FollowContainer from './follow/follow_container';
+import ChatContainer from './chat/chat_container';
 import ChannelFormContainer from './channels/channel_form_container';
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
     <NavbarContainer />
     <div id='navbar-placeholder'></div>
     <Route path='/channels' component={FollowContainer} />
+    <Route path='/channels/:channelId' component={ChatContainer} />
 
     <Switch>
       <Route path='/channels/:channelId' component={ChannelShow} />

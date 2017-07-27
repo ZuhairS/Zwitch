@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/follow_api_util';
+import * as APIUtil from '../util/chat_api_util';
 
 export const RECEIVE_CHATROOM = "RECEIVE_CHATROOM";
 export const RECEIVE_CHAT_MESSAGE = "RECEIVE_CHAT_MESSAGE";

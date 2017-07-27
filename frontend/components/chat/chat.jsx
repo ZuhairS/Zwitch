@@ -12,11 +12,30 @@ export default class Chat extends React.Component {
   }
 
   render() {
-    const follows = this.props.follows;
+    const chatMessages = this.props.chatMessages;
     const currentUser = this.props.currentUser;
 
-    if (currentUser && follows ) {
+    if (chatMessages) {
       return (
+        <section className='chatroom-container'>
+          <header id='chat-title'>
+            <h2>{this.props.channel.channel_name}</h2>
+          </header>
+
+          <section className='chat-windows'>
+            <div id='chat-display'>
+
+            </div>
+
+            <div id='chat-input'>
+              <textarea placeholder='Send a message...' />
+
+              <div id='send-div'>
+                <button>Chat</button>
+              </div>
+            </div>
+          </section>
+        </section>
       );
     } else {
       return <div></div>;

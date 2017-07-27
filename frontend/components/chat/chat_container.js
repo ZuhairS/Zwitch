@@ -4,8 +4,9 @@ import { requestChatroom, createChatMessage } from '../../actions/chat_actions';
 import { selectChatMessages } from '../../reducers/selectors';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({chatMessages, session}) => ({
+const mapStateToProps = ({chatMessages, channels, session}) => ({
   chatMessages: selectChatMessages(chatMessages),
+  channel: channels.selectedChannel,
   currentUser: session.currentUser
 });
 
