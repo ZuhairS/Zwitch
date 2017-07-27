@@ -7,3 +7,5 @@ export const selectFeaturedChannels = channels => values(channels.featuredChanne
 export const selectFollows = follows => values(follows.all_follows);
 
 export const selectFollowIds = follows => values(follows.followed_channel_ids);
+
+export const selectChatMessages = chatroom => values(chatroom);

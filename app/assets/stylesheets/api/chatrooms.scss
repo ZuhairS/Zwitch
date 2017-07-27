@@ -1,0 +1,11 @@
+// Place all the styles related to the Api/Chatrooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#chat-placeholder {
+  min-width: 340px;
+  height: 1000px;
+  background-color: #FAF9FA;
+  border-left: 1px solid #DEDDDE;
+  z-index: -1;
+}
