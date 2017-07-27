@@ -18,7 +18,7 @@ batman_channel = Channel.find(batman.id).update_attributes!(
           video_url: 'https://www.youtube.com/watch?v=pO2_iUkojCY',
           stream_name: 'Batman: Arkham Knight - Just another day',
           stream_description: "As the citizens of Gotham flee and criminal gangs take control of the city, Batman uses his own special methods to discover the true purpose behind Scarecrow's plans.",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775137/Profiles/image_hzhibk.jpg'
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775137/Profiles/image_hzhibk.jpg'
 )
 
 shadow = User.create!(
@@ -41,7 +41,7 @@ spidey_channel = Channel.find(spidey.id).update_attributes!(
           video_url: 'https://www.youtube.com/watch?v=8pR0o2fGyHg',
           stream_name: 'Spider-Man E3 Gameplay',
           stream_description: 'Check out the gameplay demo of Marvel’s Spider-Man shown at the E3 2017.',
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775111/Profiles/78244_g4ueq0.jpg'
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775111/Profiles/78244_g4ueq0.jpg'
 )
 
 john = User.create!(
@@ -53,7 +53,7 @@ john_channel = Channel.find(john.id).update_attributes!(
           channel_name: 'John Freeman',
           video_url: 'https://www.youtube.com/watch?v=OHxyZaZlaOs',
           stream_name: 'Life is full of half-life consequences...', stream_description: 'When life gives you lemons, make lemon grenades. Or watch my stream. Either works.',
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775093/Profiles/john-freeman_jezgoi.png'
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775093/Profiles/john-freeman_jezgoi.png'
 )
 
 dio = User.create!(
@@ -66,7 +66,7 @@ dio_channel = Channel.find(dio.id).update_attributes!(
           video_url: 'https://www.youtube.com/watch?v=hATyU-bb1gc',
           stream_name: "JoJo's Bizarre Adventure: All-Star Battle - DIO",
           stream_description: "Channel dedicated to DIO, the Evil Incarnate, the main antagonist of JoJo's Bizarre Adventure.",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500775126/Profiles/103_izqxma.png'
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775126/Profiles/103_izqxma.png'
 )
 
 zelda = User.create!(
@@ -79,7 +79,7 @@ zelda_channel = Channel.find(zelda.id).update_attributes!(
           video_url: 'https://www.youtube.com/watch?v=1rPxiXXxftE',
           stream_name: "The Legend of Zelda: Breath of the Wild",
           stream_description: "Enjoy the beauty of the wilderness in Breath of the Wild.",
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500851793/Profiles/25.jpg'
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500851793/Profiles/25.jpg'
 )
 
 inside = User.create!(
@@ -92,5 +92,5 @@ inside_channel = Channel.find(inside.id).update_attributes!(
           video_url: 'https://www.youtube.com/watch?v=NP4AuKdb_dA',
           stream_name: 'Inside: Complete Walkthrough',
           stream_description: 'Full Walkthrough for the game Inside. All secrets, all collectables, both endings. Enjoy!',
-          profile_image_url: 'http://res.cloudinary.com/zwitch/image/upload/q_100/v1500850453/Profiles/mlwVgO2L.jpg'
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500850453/Profiles/mlwVgO2L.jpg'
 )

@@ -22,7 +22,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-attachment: fixed;
   // border: 1px solid black;
 
   #chat-title {
@@ -49,17 +48,16 @@
     #chat-display {
       max-height: 80%;
       // height: 80%;
+      font-size: 12px;
       flex: auto;
       width: 100%;
-      display: flex;
-      align-items: flex-end;
+      // display: flex;
+      // align-items: flex-end;
       padding: 10px;
       box-sizing: border-box;
+      overflow-y: scroll;
 
       ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
 
         .chat-item {
           margin: 2px 0;

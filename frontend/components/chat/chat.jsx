@@ -23,7 +23,10 @@ export default class Chat extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestChatroom(this.channelId);
+    this.props.requestChatroom(this.channelId).then(() => {
+      this.display.scrollTop = this.display.scrollHeight;
+    });
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,11 +38,11 @@ export default class Chat extends React.Component {
 
   handleChat(event) {
     event.preventDefault();
-    this.props.createChatMessage(this.state).then(
-      this.setState({
-        body: ""
-      })
-    );
+    let chatWindow = document.getElementById('chat-display');
+    if (this.state.body !== "") {
+      this.props.createChatMessage(this.state).then(
+        this.setState({body: ""})).then(() => {this.display.scrollTop = this.display.scrollHeight;});
+    }
   }
 
   updateChat(event) {
@@ -82,11 +85,11 @@ export default class Chat extends React.Component {
       return (
         <section className='chatroom-container'>
           <header id='chat-title'>
-            <h2>{this.props.channel.channel_name}</h2>
+            <h2>{this.props.channel.channel_name} Chatroom</h2>
           </header>
 
           <section className='chat-windows'>
-            <div id='chat-display'>
+            <div id='chat-display' ref={el => {this.display = el;} }>
               <ul>
                 {chatMessages.map(chatMessage => (
                   <ChatItem key={chatMessage.id}
