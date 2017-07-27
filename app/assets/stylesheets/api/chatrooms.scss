@@ -46,7 +46,7 @@
     flex-direction: column;
 
     #chat-display {
-      max-height: 80%;
+      max-height: 81%;
       // height: 80%;
       font-size: 12px;
       flex: auto;
@@ -61,6 +61,17 @@
 
         .chat-item {
           margin: 2px 0;
+          font-weight: lighter;
+
+          strong.colored {
+            font-weight: bold;
+            color: #FF4FC5;
+          }
+
+          strong.not-colored {
+            font-weight: bold;
+            color: #6743A7;
+          }
         }
       }
     }
@@ -87,7 +98,7 @@
         button {
           background-color: #6441A4;
           color: white;
-          padding: 7px 10px;
+          padding: 5px 13px;
           margin: 2px 0;
           transition: background-color 0.3s;
           font-size: 12px;

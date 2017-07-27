@@ -27,8 +27,8 @@ export default class Follow extends React.Component {
           <section className='follow-list'>
             <ul>
               {follows.map(follow => (
-                <li key={follow.id} className="follow-item">
-                  <Link to={`/channels/${follow.followed_channel.id}`}>
+                <Link key={follow.id} to={`/channels/${follow.followed_channel.id}`}>
+                  <li className="follow-item">
 
                     <div className='follow-profile-img'>
                       <img src={follow.followed_channel.profile_image_url} />
@@ -38,8 +38,8 @@ export default class Follow extends React.Component {
                       <h3>{follow.followed_channel.channel_name}</h3>
                       <h5>{follow.followed_channel.stream_name}</h5>
                     </div>
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               ))}
             </ul>
           </section>

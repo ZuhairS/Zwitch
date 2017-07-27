@@ -3,6 +3,8 @@ class Follow < ApplicationRecord
             :followed_channel,
             presence: true
 
+  validates :followed_channel, uniqueness: { scope: :follower, message: "one follow per user" }
+
   belongs_to :follower,
     class_name: "User",
     primary_key: :id,
@@ -12,5 +14,5 @@ class Follow < ApplicationRecord
     class_name: "Channel",
     primary_key: :id,
     foreign_key: :followed_channel_id
-    
+
 end

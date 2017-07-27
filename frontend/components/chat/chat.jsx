@@ -93,6 +93,7 @@ export default class Chat extends React.Component {
               <ul>
                 {chatMessages.map(chatMessage => (
                   <ChatItem key={chatMessage.id}
+                    currentUser={currentUser}
                     chatMessage={chatMessage} />
                 ))}
               </ul>

@@ -18,7 +18,7 @@
   <img src="./wireframes/Browse Channel List.png" />
 </kbd>
 
-##### Follow Sidebar - Opem
+##### Follow Sidebar - Open
 <kbd>
   <img src="./wireframes/Sidebar - Open.png" />
 </kbd>
