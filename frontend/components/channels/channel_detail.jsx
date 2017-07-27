@@ -20,12 +20,18 @@ export default class ChannelDetail extends React.Component {
 
   componentDidMount() {
     this.props.requestSingleChannel(this.channelId);
-    this.props.requestFollows();
+    if (this.props.currentUser) {
+      this.props.requestFollows();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.channelId !== nextProps.match.params.channelId) {
       this.props.requestSingleChannel(nextProps.match.params.channelId);
+      this.channelId = nextProps.match.params.channelId;
+      if (this.props.currentUser) {
+        this.props.requestFollows();
+      }
     }
   }
 
@@ -70,7 +76,7 @@ export default class ChannelDetail extends React.Component {
       </button>;
     } else if (this.props.currentUser && this.props.followIds.includes(parseInt(this.channelId))) {
       channelButton = <button onClick={this.handleUnfollow} id='follow-button'>Unfollow</button>;
-    } else {
+    } else if (this.props.currentUser) {
       channelButton = <button onClick={this.handleFollow} id='follow-button'>Follow</button>;
     }
 

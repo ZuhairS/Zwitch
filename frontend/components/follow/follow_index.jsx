@@ -8,7 +8,9 @@ export default class Follow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestFollows();
+    if (this.props.currentUser) {
+      this.props.requestFollows();
+    }
   }
 
   render() {
