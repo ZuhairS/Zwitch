@@ -1,24 +1,9 @@
-# README
+# Zwitch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live APP](https://github.com/ZuhairS/Zwitch)
 
-Things you may want to cover:
+A full-stack web application heavily inspired by Twitch, Zwitch focuses on providing a gaming visual aesthetic and pleasing interactions to create an appealing user experience.
 
-* Ruby version
+Built using React/Redux framework for the frontend and Rails 5 for the backend, Zwitch utilizes industry standard practices as well as clever problem solving in its implementation.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Notable Features
