@@ -55,6 +55,14 @@ class Channel < ApplicationRecord
     playing_channels.offset(rand(playing_channels.count)).first
   end
 
+  def follows
+    self.followers.count
+  end
+
+  def followings
+    self.owner.followed_channels.count
+  end
+
   private
 
   def ensure_default_channel_name

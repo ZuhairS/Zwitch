@@ -90,8 +90,8 @@ export default class ChannelDetail extends React.Component {
             </div>
             <h2>{channel.channel_name}</h2>
             <h3>{channel.owner_name}</h3>
-            <h3>Follows: 0</h3>
-            <h3>Following: 0</h3>
+            <h3>Followers: {channel.follows}</h3>
+            <h3>Following: {channel.followings}</h3>
             <div id='follow-customize-button-container'>
               { channelButton }
             </div>
@@ -106,7 +106,7 @@ export default class ChannelDetail extends React.Component {
               </div>
 
               <div id='channel-viewers'>
-                <h4>1 Viewer</h4>
+                <h4>{Math.floor((Math.random() * 1000) + 1)} viewers</h4>
               </div>
             </div>
           </section>

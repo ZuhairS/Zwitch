@@ -6,3 +6,5 @@ json.extract! channel, :id,
                        :profile_image_url,
                        :banner_image_url
 json.owner_name channel.owner.username
+json.follows channel.follows
+json.followings channel.followings

@@ -35,7 +35,7 @@ export default class Channels extends React.Component {
                 <Link className='link' to={`/channels/${channel.id}`}>
                   <h4>{ channel.stream_name }</h4>
                 </Link>
-                <p>{'Some viewers on '}
+                <p>{Math.floor((Math.random() * 1000) + 1) + ' viewers on '}
                   <Link className='link' to={`/channels/${channel.id}`}>
                     <strong>{channel.channel_name}</strong>
                   </Link>
