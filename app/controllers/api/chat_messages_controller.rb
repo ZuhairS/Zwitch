@@ -1,12 +1,19 @@
 class Api::ChatMessagesController < ApplicationController
 
-
+  before_action :require_logged_in
 
   def create
     @chat_message = ChatMessage.new(chat_message_params)
 
     if @chat_message.save!
-      render "api/chat_messages/show"
+
+      ActionCable.server.broadcast 'messages',
+        body: @chat_message.body,
+        username: @chat_message.user.username,
+        channel_id: @chat_message.chatroom.channel.id
+      head :ok
+
+      # render "api/chat_messages/show"
     else
       render json: @chat_message.errors.full_messages, status: 422
     end

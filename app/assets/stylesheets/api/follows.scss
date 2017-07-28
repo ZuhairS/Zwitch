@@ -15,6 +15,7 @@
   align-items: center;
   color: white;
   margin-bottom: 70px;
+  z-index: 1;
   // margin-right: 30px;
   background-attachment: fixed;
 
@@ -39,7 +40,7 @@
 
     .follow-item {
       display: flex;
-      margin-top: 10px;
+      margin: 10px;
       // justify-content: space-between;
       // border: 1px solid white;
 

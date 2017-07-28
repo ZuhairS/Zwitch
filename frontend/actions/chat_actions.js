@@ -18,5 +18,5 @@ export const requestChatroom = channelId => dispatch => (
 );
 
 export const createChatMessage = chatMessage => dispatch => (
-  APIUtil.createChatMessage(chatMessage).then(createdChatMessage => dispatch(receiveChatMessage(createdChatMessage)))
+  APIUtil.createChatMessage(chatMessage)
 );

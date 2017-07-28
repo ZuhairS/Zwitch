@@ -32,7 +32,8 @@ class User < ApplicationRecord
   has_many :follows,
     class_name: "Follow",
     primary_key: :id,
-    foreign_key: :follower_id
+    foreign_key: :follower_id,
+    dependent: :destroy
 
   has_many :followed_channels,
     source: :followed_channel,

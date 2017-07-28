@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :api do
-    get 'chat_messages/create'
-  end
-
-  namespace :api do
-    get 'chatrooms/show'
-  end
-
   namespace :api, defaults: { format: :json } do
     resources :users, only: :create
     resource :session, only: [:create, :destroy]
@@ -19,6 +11,8 @@ Rails.application.routes.draw do
       resources :chat_messages, only: [:create, :show]
     end
   end
+
+  mount ActionCable.server => '/cable'
 
   root to: 'static_pages#root'
 end

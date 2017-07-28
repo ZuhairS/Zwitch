@@ -29,12 +29,13 @@ class Channel < ApplicationRecord
     primary_key: :id,
     foreign_key: :owner_id
 
-  has_one :chatroom
+  has_one :chatroom, dependent: :destroy
 
   has_many :follows,
     class_name: "Follow",
     primary_key: :id,
-    foreign_key: :followed_channel_id
+    foreign_key: :followed_channel_id,
+    dependent: :destroy
 
   has_many :followers,
     source: :follower,

@@ -25,6 +25,13 @@ export default class Chat extends React.Component {
   componentDidMount() {
     this.props.requestChatroom(this.channelId).then(() => {
       this.display.scrollTop = this.display.scrollHeight;
+
+      this.subscription = App.cable.subscriptions.create('MessagesChannel', {
+        received: data => {
+          this.props.receiveChatMessage(data);
+          this.display.scrollTop = this.display.scrollHeight;
+        }
+      });
     });
 
   }
@@ -34,6 +41,10 @@ export default class Chat extends React.Component {
       this.props.requestChatroom(nextProps.match.params.channelId);
       this.channelId = nextProps.match.params.channelId;
     }
+  }
+
+  componentWillUnmount() {
+    App.cable.subscriptions.remove(this.subscription);
   }
 
   handleChat(event) {
