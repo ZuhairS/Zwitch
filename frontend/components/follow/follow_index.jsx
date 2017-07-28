@@ -46,7 +46,18 @@ export default class Follow extends React.Component {
         </aside>
       );
     } else {
-      return <div className='follow-container'></div>;
+      return (
+        <div className='follow-container'>
+          <aside className="follow-container">
+            <header className='follow-header'>
+              <h2>Followed Channels</h2>
+            </header>
+          <section className='follow-list'>
+            <p>Sign up or log in to follow channels and easily access your favorites here.</p>
+          </section>
+        </aside>
+        </div>
+      );
     }
   }
 }

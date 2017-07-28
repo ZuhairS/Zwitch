@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 
 # For secure APIs
-gem 'figaro'
+# gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

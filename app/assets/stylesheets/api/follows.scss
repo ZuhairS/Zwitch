@@ -8,6 +8,7 @@
 .follow-container {
   position: fixed;
   min-width: 240px;
+  max-width: 240px;
   height: 100%;
   background-color: #191229;
   display: flex;
@@ -36,6 +37,14 @@
     // flex-direction: column;
     // justify-content: flex-start;
     // align-items: flex-start;
+
+    p {
+      width: 80%;
+      margin-top: 60px;
+      margin-left: 20px;
+      font-weight: lighter;
+      text-align: center;
+    }
 
     .follow-item {
       display: flex;
