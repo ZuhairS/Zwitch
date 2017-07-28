@@ -6,5 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:73d8a1d69ddb1ebc22d1532aadeb2da3@barreleye.redistogo.com:10256/
+  
   channel_prefix: Zwitch_production
