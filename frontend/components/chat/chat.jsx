@@ -40,6 +40,7 @@ export default class Chat extends React.Component {
     if (this.props.match.params.channelId !== nextProps.match.params.channelId) {
       this.props.requestChatroom(nextProps.match.params.channelId);
       this.channelId = nextProps.match.params.channelId;
+
     }
   }
 
@@ -49,7 +50,7 @@ export default class Chat extends React.Component {
 
   handleChat(event) {
     event.preventDefault();
-    let chatWindow = document.getElementById('chat-display');
+
     if (this.state.body !== "") {
       this.props.createChatMessage(this.state).then(
         this.setState({body: ""})).then(() => {this.display.scrollTop = this.display.scrollHeight;});

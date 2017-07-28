@@ -8,6 +8,7 @@ class Api::ChatMessagesController < ApplicationController
     if @chat_message.save!
 
       ActionCable.server.broadcast 'messages',
+        id: @chat_message.id,
         body: @chat_message.body,
         username: @chat_message.user.username,
         channel_id: @chat_message.chatroom.channel.id
