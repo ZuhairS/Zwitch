@@ -92,6 +92,11 @@
         font-size: 12px;
       }
 
+      textarea:focus {
+        border:1px solid #8B64E5;
+        box-shadow: 0 0 5px #719ECE;
+      }
+
       #send-div {
         display: flex;
         justify-content: flex-end;

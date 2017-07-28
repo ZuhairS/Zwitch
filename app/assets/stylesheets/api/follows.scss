@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: #b8b5c0;
   margin-bottom: 70px;
   z-index: 1;
   // margin-right: 30px;
@@ -21,9 +21,9 @@
 
   .follow-header {
     width: 90%;
+    margin-bottom: 5px;
 
     h2 {
-      color: white;
       padding: 20px 0 13px 0;
       font-weight: lighter;
       border-bottom: 1px solid #514B5B;
@@ -31,7 +31,7 @@
   }
 
   .follow-list {
-    width: 200px;
+    width: 100%;
     // display: flex;
     // flex-direction: column;
     // justify-content: flex-start;
@@ -39,14 +39,14 @@
 
     .follow-item {
       display: flex;
-      margin: 10px;
+      padding: 10px;
       // justify-content: space-between;
       // border: 1px solid white;
 
       .follow-profile-img {
         height: 40px;
         width: 40px;
-        margin-right: 5px;
+        margin: 0 10px;
         border: 1px solid white;
 
         img {
@@ -69,14 +69,14 @@
         }
 
         h5 {
-          font-size: 10px;
+          font-size: 11px;
           font-weight: lighter;
         }
       }
     }
 
     .follow-item:hover {
-      background-color: #39295E;
+      background-color: #08060E;
     }
   }
 }
