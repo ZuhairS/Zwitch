@@ -116,3 +116,11 @@
     }
   }
 }
+
+@media (max-width: 100vh) {
+  #chat-placeholder, .chatroom-container {
+    min-width: 0;
+    width: 0;
+    display: none;
+  }
+}

@@ -36,7 +36,6 @@
     // flex-direction: column;
     // justify-content: flex-start;
     // align-items: flex-start;
-    overflow-y: scroll;
 
     .follow-item {
       display: flex;
@@ -79,5 +78,13 @@
     .follow-item:hover {
       background-color: #39295E;
     }
+  }
+}
+
+@media (max-width: 140vh) {
+  #follow-bar-placeholder, .follow-container {
+    min-width: 0;
+    width: 0;
+    display: none;
   }
 }
