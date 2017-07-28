@@ -1,6 +1,6 @@
 # Zwitch
 
-[Live APP](https://github.com/ZuhairS/Zwitch)
+[Live APP](zwitch.tv)
 
 [Trello](https://trello.com/b/GYIPbjDY/zwitch)
 
@@ -10,11 +10,11 @@ Zwitch is a web application inspired by Twitch built using Ruby on Rails and Rea
 
 - [x] Hosting on Heroku
 - [x] Signup/Login/Logout along with demo Login
-- [ ] Adding/streaming online videos
-- [ ] Follows
-- [ ] Basic chat
-- [ ] User/Channel profiles
-- [ ] Production README
+- [x] Adding/streaming online videos
+- [x] Follows
+- [x] Basic chat
+- [x] User/Channel profiles
+- [x] Production README
 
 ## Design Docs
 - [View Wireframes](./wireframes.md)
@@ -50,7 +50,7 @@ Zwitch is a web application inspired by Twitch built using Ruby on Rails and Rea
 - Fully styled chat component.
 
 ### Bonus Features
-- [ ] Live chat
+- [x] Live chat
 - [ ] Synced videos between users
 - [ ] Search channels
 - [ ] Get notifications when followee starts stream
