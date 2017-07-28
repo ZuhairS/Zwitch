@@ -33,7 +33,7 @@
 
   .follow-list {
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     // display: flex;
     // flex-direction: column;
     // justify-content: flex-start;
@@ -88,6 +88,10 @@
     .follow-item:hover {
       background-color: #08060E;
     }
+  }
+
+  .follow-list:hover {
+    overflow-y: scroll;
   }
 }
 
