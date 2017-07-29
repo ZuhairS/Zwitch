@@ -6,13 +6,16 @@ class Api::ChatMessagesController < ApplicationController
     @chat_message = ChatMessage.new(chat_message_params)
 
     if @chat_message.save!
+      chatroom = Chatroom.find(params[:chatroom_id])
 
-      ActionCable.server.broadcast 'messages',
-        id: @chat_message.id,
-        body: @chat_message.body,
-        username: @chat_message.user.username,
-        channel_id: @chat_message.chatroom.channel.id
-      head :ok
+      MessagesChannel.broadcast_to chatroom, message:
+          {
+            id: @chat_message.id,
+            body: @chat_message.body,
+            username: @chat_message.user.username,
+            channel_id: @chat_message.chatroom.channel.id
+          }
+
 
       # render "api/chat_messages/show"
     else

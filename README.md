@@ -1,6 +1,6 @@
 # Zwitch
 
-![Zwitch Logo](docs/Zwitch Logo.png)
+![alt text](./docs/Zwitch Logo.png "Zwitch Logo")
 
 [Live APP](zwitch.tv)
 

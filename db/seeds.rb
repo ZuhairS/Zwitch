@@ -26,6 +26,14 @@ shadow = User.create!(
           password: "supershadow"
 )
 
+shadow_channel = Channel.find(shadow.id).update_attributes!(
+          channel_name: 'Metal Gear Solid V: The Phantom Pain',
+          video_url: 'https://www.youtube.com/watch?v=BHrUj9G-mwc',
+          stream_name: 'Why are we still here... just to suffer?',
+          stream_description: "Why are we still here... just to suffer?",
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1501352308/71853_rvcp6m.jpg'
+)
+
 deryl = User.create!(
           username: "Deryl Weevly",
           password: "weebly5000"
@@ -93,4 +101,21 @@ inside_channel = Channel.find(inside.id).update_attributes!(
           stream_name: 'Inside: Complete Walkthrough',
           stream_description: 'Full Walkthrough for the game Inside. All secrets, all collectables, both endings. Enjoy!',
           profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500850453/Profiles/mlwVgO2L.jpg'
+)
+
+dallas = User.create!(
+          username: "Dallas",
+          password: "supersecretpassword"
+)
+
+ChatMessage.create!(
+          chatroom_id: batman_channel.id,
+          user_id: dallas.id,
+          body: "Oh Hey!"
+)
+
+ChatMessage.create!(
+          chatroom_id: batman_channel.id,
+          user_id: dallas.id,
+          body: "Not a huge batman fan, but these games are sic. The trailers are cool, too."
 )
