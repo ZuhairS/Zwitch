@@ -12,6 +12,12 @@ export default class Channels extends React.Component {
     this.props.requestChannels();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.channelId !== nextProps.match.params.channelId) {
+      this.props.requestChannels();
+    }
+  }
+
   render() {
     const channels = this.props.channels;
     const title = this.props.title;
