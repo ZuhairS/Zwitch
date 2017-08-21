@@ -27,7 +27,7 @@ shadow = User.create!(
 )
 
 shadow_channel = Channel.find(shadow.id).update_attributes!(
-          channel_name: 'Metal Gear Solid V: The Phantom Pain',
+          channel_name: 'Metal Gear Solid V',
           video_url: 'https://www.youtube.com/watch?v=BHrUj9G-mwc',
           stream_name: 'Why are we still here... just to suffer?',
           stream_description: "Why are we still here... just to suffer?",

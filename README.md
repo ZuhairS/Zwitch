@@ -1,4 +1,4 @@
-# Zwitch
+# Zwitch.tv
 
 ![Zwitch Logo](docs/ZwitchLogo.png)
 
