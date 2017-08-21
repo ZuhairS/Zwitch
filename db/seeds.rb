@@ -27,9 +27,9 @@ shadow = User.create!(
 )
 
 shadow_channel = Channel.find(shadow.id).update_attributes!(
-          channel_name: 'Metal Gear Solid V',
+          channel_name: 'Sons of the Patriots',
           video_url: 'https://www.youtube.com/watch?v=BHrUj9G-mwc',
-          stream_name: 'Why are we still here... just to suffer?',
+          stream_name: 'Metal Gear Solid V: The Phantom Pain',
           stream_description: "Why are we still here... just to suffer?",
           profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1501352308/71853_rvcp6m.jpg'
 )
@@ -109,13 +109,13 @@ dallas = User.create!(
 )
 
 ChatMessage.create!(
-          chatroom_id: batman_channel.id,
+          chatroom_id: batman.id,
           user_id: dallas.id,
           body: "Oh Hey!"
 )
 
 ChatMessage.create!(
-          chatroom_id: batman_channel.id,
+          chatroom_id: batman.id,
           user_id: dallas.id,
-          body: "Not a huge batman fan, but these games are sic. The trailers are cool, too."
+          body: "Not a huge batman fan, but these games are sick. The trailers are cool, too."
 )
