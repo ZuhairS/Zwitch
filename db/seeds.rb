@@ -108,6 +108,16 @@ dallas = User.create!(
           password: "supersecretpassword"
 )
 
+ganymede = User.create!(
+          username: "Ganymede",
+          password: "jupiterbestplanet"
+)
+
+mikey = User.create!(
+          username: "mikey",
+          password: "mikeyboy96"
+)
+
 ChatMessage.create!(
           chatroom_id: batman.id,
           user_id: dallas.id,
@@ -118,4 +128,22 @@ ChatMessage.create!(
           chatroom_id: batman.id,
           user_id: dallas.id,
           body: "Not a huge batman fan, but these games are sick. The trailers are cool, too."
+)
+
+ChatMessage.create!(
+          chatroom_id: spidey.id,
+          user_id: ganymede.id,
+          body: "I am pretty excited for this."
+)
+
+ChatMessage.create!(
+          chatroom_id: spidey.id,
+          user_id: ganymede.id,
+          body: "I am glad they are sticking to their own version of spidey rather than trying to rehash the same old stories."
+)
+
+ChatMessage.create!(
+          chatroom_id: spidey.id,
+          user_id: ganymede.id,
+          body: "Also sweet we get to see Miles at the end."
 )
