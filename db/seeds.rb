@@ -131,6 +131,12 @@ ChatMessage.create!(
 )
 
 ChatMessage.create!(
+          chatroom_id: batman.id,
+          user_id: mikey.id,
+          body: "I had the video on full screen and I seriously thought my computer was crashing at the end there.﻿"
+)
+
+ChatMessage.create!(
           chatroom_id: spidey.id,
           user_id: ganymede.id,
           body: "I am pretty excited for this."
@@ -145,7 +151,7 @@ ChatMessage.create!(
 ChatMessage.create!(
           chatroom_id: spidey.id,
           user_id: ganymede.id,
-          body: "Also sweet we get to see Miles at the end."
+          body: "And sweet we get to see Miles at the end."
 )
 
 # https://www.youtube.com/watch?v=qdBpjrhqLrM Dbz

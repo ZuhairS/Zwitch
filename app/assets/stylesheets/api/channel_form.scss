@@ -1,5 +1,6 @@
 .ReactModal__Overlay {
   z-index: 2;
+  overflow: scroll;
 }
 
 .Customize-Modal {
@@ -23,6 +24,7 @@
       display: flex;
       justify-content: flex-end;
       align-self: flex-end;
+      overflow: scroll;
 
       button {
         margin: 10px 20px 0 0;
@@ -31,13 +33,14 @@
     }
 
     header {
+      width: 85%;
       h1 {
         font-family: 'dimis';
         font-size: 30px;
+        border-bottom: 4px solid #6743A7;
+        text-align: center;
       }
-
       .errors {
-
       }
     }
 
@@ -46,7 +49,6 @@
       justify-content: space-around;
       width: 1000px;
       height: 500px;
-      // border: 1px solid blue;
 
       .left-form {
         display: flex;
