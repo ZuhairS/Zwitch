@@ -121,6 +121,7 @@ So to get around that, I used a dummy `<Route>` whose entire purpose was to scro
 Like so,
 
 ```javaScript
+// frontend/components/App.jsx
 const App = () => (
   <section className="zwitch">
     <Route component={ScrollToTop} />
