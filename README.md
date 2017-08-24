@@ -1,4 +1,6 @@
-![Zwitch Logo](docs/ZwitchLogo.png)
+<!-- ![Zwitch Logo](docs/ZwitchLogo.png) -->
+
+<a href='http://www.zwitch.tv/'><img src='docs/ZwitchLogo.png' /></a>
 
 [Check out the Live APP!](zwitch.tv)
 
