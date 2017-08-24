@@ -13,7 +13,7 @@ batman = User.create!(
           password: "superdarkgrumpster"
 )
 
-batman_channel = Channel.find(batman.id).update_attributes!(
+Channel.find(batman.id).update_attributes!(
           channel_name: 'Darkest Night',
           video_url: 'https://www.youtube.com/watch?v=pO2_iUkojCY',
           stream_name: 'Batman: Arkham Knight - Just another day',
@@ -26,17 +26,25 @@ shadow = User.create!(
           password: "supershadow"
 )
 
-shadow_channel = Channel.find(shadow.id).update_attributes!(
+Channel.find(shadow.id).update_attributes!(
           channel_name: 'Sons of the Patriots',
           video_url: 'https://www.youtube.com/watch?v=BHrUj9G-mwc',
           stream_name: 'Metal Gear Solid V: The Phantom Pain',
-          stream_description: "Why are we still here... just to suffer?",
+          stream_description: "\"Why are we still here... just to suffer?\" Enjoy the trailer for the last Metal Gear game from Hideo Kojima.",
           profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1501352308/71853_rvcp6m.jpg'
 )
 
-deryl = User.create!(
+dbz = User.create!(
           username: "Deryl Weevly",
           password: "weebly5000"
+)
+
+Channel.find(dbz.id).update_attributes!(
+          channel_name: 'Fighters of Z',
+          video_url: 'https://www.youtube.com/watch?v=qdBpjrhqLrM',
+          stream_name: 'Dragonball Fighter Z',
+          stream_description: " Dragon Ball Fighter Z is born from what makes the DRAGON BALL series so loved and famous: endless spectacular fights with its allpowerful fighters.",
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/c_crop,h_720,q_100,w_720,x_170/v1503518664/maxresdefault_tvcdi6.jpg'
 )
 
 spidey = User.create!(
@@ -44,7 +52,7 @@ spidey = User.create!(
           password: "gomahvel"
 )
 
-spidey_channel = Channel.find(spidey.id).update_attributes!(
+Channel.find(spidey.id).update_attributes!(
           channel_name: 'Mahvel',
           video_url: 'https://www.youtube.com/watch?v=8pR0o2fGyHg',
           stream_name: 'Spider-Man E3 Gameplay',
@@ -52,24 +60,12 @@ spidey_channel = Channel.find(spidey.id).update_attributes!(
           profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775111/Profiles/78244_g4ueq0.jpg'
 )
 
-john = User.create!(
-          username: "potato monster",
-          password: "potatoes"
-)
-
-john_channel = Channel.find(john.id).update_attributes!(
-          channel_name: 'John Freeman',
-          video_url: 'https://www.youtube.com/watch?v=OHxyZaZlaOs',
-          stream_name: 'Life is full of half-life consequences...', stream_description: 'When life gives you lemons, make lemon grenades. Or watch my stream. Either works.',
-          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775093/Profiles/john-freeman_jezgoi.png'
-)
-
 dio = User.create!(
           username: "Dio",
           password: "itisidio"
 )
 
-dio_channel = Channel.find(dio.id).update_attributes!(
+Channel.find(dio.id).update_attributes!(
           channel_name: 'It is I, Dio!',
           video_url: 'https://www.youtube.com/watch?v=hATyU-bb1gc',
           stream_name: "JoJo's Bizarre Adventure: All-Star Battle - DIO",
@@ -82,7 +78,7 @@ zelda = User.create!(
           password: "jambojambo"
 )
 
-zelda_channel = Channel.find(zelda.id).update_attributes!(
+Channel.find(zelda.id).update_attributes!(
           channel_name: 'For Heart and Soul',
           video_url: 'https://www.youtube.com/watch?v=1rPxiXXxftE',
           stream_name: "The Legend of Zelda: Breath of the Wild",
@@ -95,12 +91,24 @@ inside = User.create!(
           password: "mackster12"
 )
 
-inside_channel = Channel.find(inside.id).update_attributes!(
+Channel.find(inside.id).update_attributes!(
           channel_name: 'Mind Channel',
           video_url: 'https://www.youtube.com/watch?v=NP4AuKdb_dA',
           stream_name: 'Inside: Complete Walkthrough',
           stream_description: 'Full Walkthrough for the game Inside. All secrets, all collectables, both endings. Enjoy!',
           profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500850453/Profiles/mlwVgO2L.jpg'
+)
+
+john = User.create!(
+          username: "potato monster",
+          password: "potatoes"
+)
+
+Channel.find(john.id).update_attributes!(
+          channel_name: 'John Freeman',
+          video_url: 'https://www.youtube.com/watch?v=OHxyZaZlaOs',
+          stream_name: 'Life is full of half-life consequences...', stream_description: 'When life gives you lemons, make lemon grenades. Or watch my stream. Either works.',
+          profile_image_url: 'https://res.cloudinary.com/zwitch/image/upload/q_100/v1500775093/Profiles/john-freeman_jezgoi.png'
 )
 
 dallas = User.create!(
@@ -116,6 +124,31 @@ ganymede = User.create!(
 mikey = User.create!(
           username: "mikey",
           password: "mikeyboy96"
+)
+
+terrance = User.create!(
+          username: "Terrance",
+          password: "appacademy"
+)
+
+joey = User.create!(
+          username: "Joey",
+          password: "joeyjoey"
+)
+
+howard = User.create!(
+          username: "Howard",
+          password: "howieisgreat"
+)
+
+ade = User.create!(
+          username: "Ade",
+          password: "frigginjoey"
+)
+
+virginia = User.create!(
+          username: "Virginia",
+          password: "beststate"
 )
 
 ChatMessage.create!(
@@ -137,6 +170,12 @@ ChatMessage.create!(
 )
 
 ChatMessage.create!(
+          chatroom_id: batman.id,
+          user_id: terrance.id,
+          body: "Its a bit too dark for my taste.﻿"
+)
+
+ChatMessage.create!(
           chatroom_id: spidey.id,
           user_id: ganymede.id,
           body: "I am pretty excited for this."
@@ -150,8 +189,89 @@ ChatMessage.create!(
 
 ChatMessage.create!(
           chatroom_id: spidey.id,
+          user_id: mikey.id,
+          body: "that swinging is so smooth"
+)
+
+ChatMessage.create!(
+          chatroom_id: spidey.id,
+          user_id: mikey.id,
+          body: "me wants it"
+)
+
+ChatMessage.create!(
+          chatroom_id: spidey.id,
           user_id: ganymede.id,
           body: "And sweet we get to see Miles at the end."
 )
 
-# https://www.youtube.com/watch?v=qdBpjrhqLrM Dbz
+ChatMessage.create!(
+          chatroom_id: dbz.id,
+          user_id: terrance.id,
+          body: "These trailers are actually art... I shouldn't be this excited﻿."
+)
+
+ChatMessage.create!(
+          chatroom_id: dbz.id,
+          user_id: mikey.id,
+          body: "agreed﻿"
+)
+
+ChatMessage.create!(
+          chatroom_id: dbz.id,
+          user_id: mikey.id,
+          body: "can't wait to ﻿spend summer playing it"
+)
+
+ChatMessage.create!(
+          chatroom_id: dio.id,
+          user_id: dio.id,
+          body: "I REJECT MY HUMANITY, JOJO!"
+)
+
+ChatMessage.create!(
+          chatroom_id: dio.id,
+          user_id: dio.id,
+          body: "I have become so much more!"
+)
+
+ChatMessage.create!(
+          chatroom_id: dio.id,
+          user_id: virginia.id,
+          body: "What are you even on about"
+)
+
+ChatMessage.create!(
+          chatroom_id: zelda.id,
+          user_id: virginia.id,
+          body: "The world is so peaceful."
+)
+
+ChatMessage.create!(
+          chatroom_id: zelda.id,
+          user_id: virginia.id,
+          body: "All I want to do is walk around."
+)
+
+ChatMessage.create!(
+          chatroom_id: john.id,
+          user_id: joey.id,
+          body: "This is some funny stuff."
+)
+
+ChatMessage.create!(
+          chatroom_id: shadow.id,
+          user_id: ade.id,
+          body: "Why is everything in this game so ridiculous."
+)
+
+ChatMessage.create!(
+          chatroom_id: shadow.id,
+          user_id: howard.id,
+          body: "The ridiculousness is the best part though"
+)
+ChatMessage.create!(
+          chatroom_id: shadow.id,
+          user_id: howard.id,
+          body: "So entertaining"
+)

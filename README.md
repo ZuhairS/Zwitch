@@ -2,9 +2,11 @@
 
 ![Zwitch Logo](docs/ZwitchLogo.png)
 
-[Live APP](zwitch.tv)
+[Check out the Live APP!](zwitch.tv)
 
-A full-stack web application heavily inspired by Twitch, a popular live streaming video platform, Zwitch serves as a social platform where you can stream notable video game oriented videos while interacting with other viewers in realtime. Zwitch focuses on providing a gaming visual aesthetic and smooth interactions to create a pleasing user experience.
+![Landing Page](docs/assets/Zwitch_landing.gif)
+
+A full-stack web application inspired by Twitch, a popular live video platform streaming, Zwitch serves as a social platform where you can stream notable video game oriented videos while interacting with other viewers in realtime.
 
 Built using React/Redux framework for the frontend and Rails 5 for the backend, Zwitch utilizes industry standard practices as well as clever problem solving in its implementation.
 
@@ -14,15 +16,15 @@ Built using React/Redux framework for the frontend and Rails 5 for the backend, 
 
 ### Live Chat
 
-While I initially planned only for basic refresh based chats, I knew Zwitch needed actual live chats. With a bit of help from Rails Action Cable documentation and guidance from a fellow engineer, I seamlessly integrated WebSockets into my app. Since Rails Action Cable is full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework, it allows using standard rails and react style and form to implement real time chat feature.
+While I initially planned only for basic refresh based chats, with a bit of help from Rails Action Cable documentation and guidance from a fellow engineer, I seamlessly integrated WebSockets into my app and implemented live chat. Since Rails Action Cable is full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework, it allows using standard rails and react styles and form to implement real time chat.
 
-**[]() Gif here**
+![Live Chat](docs/assets/Zwitch_chat.gif)
 
-Rails Action Cable essentially works by creating cable channels that different consumers(instance of user) can subscribe to. Each channel can then have zero or more broadcastings where every consumer subscribed to the channel receives the updated transmissions.
+Rails Action Cable essentially works by creating cable channels that different consumers(instances of user) can subscribe to. Each channel can then have zero or more broadcastings where every consumer subscribed to the channel receives the updated transmissions.
 
-For example, in the ChatMessagesController initially the created Chat message would just be sent to the frontend as a JSON, it is now the ActionCable that directs the relevant message attributes to all of its subscribers.
+For example in the `ChatMessagesController`, in the non-ActionCable rendition of chat the created `ChatMessage` would be sent to the frontend as a JSON. it is now the `ActionCable` that directs the relevant message attributes to all of its subscribers.
 
-```
+```ruby
 # app/controllers/api/chat_messages_controller.rb
 
 class Api::ChatMessagesController < ApplicationController
@@ -44,22 +46,27 @@ class Api::ChatMessagesController < ApplicationController
 
 ```
 
-On the frontend, the user now automatically subscribes to the chatroom as soon as the component loads and unsubscribes when they leave the page.
+On the frontend, the user now automatically subscribes to the chatroom with the same id as the channel as soon as the component loads and unsubscribes when they leave the page.
 
-```
+```javaScript
 // frontend/components/chat/chat.jsx
 
 componentDidMount() {
   this.props.requestChatroom(this.channelId).then(() => {
     this.display.scrollTop = this.display.scrollHeight;
 
-    this.subscription = App.cable.subscriptions.create('MessagesChannel', {
+    this.subscription = App.cable.subscriptions.create(
+    {
+      channel: 'MessagesChannel',
+      id: this.props.match.params.channelId
+    }, {
       received: data => {
-        this.props.receiveChatMessage(data);
+        this.props.receiveChatMessage(data.message);
         this.display.scrollTop = this.display.scrollHeight;
       }
     });
   });
+
 }
 
 componentWillUnmount() {
@@ -67,17 +74,17 @@ componentWillUnmount() {
 }
 ```
 
-###### `this.display.scrollTop = this.display.scrollHeight` ensures that the chat window is scrolled all the way up when the user visits the page.
+###### `this.display.scrollTop = this.display.scrollHeight` ensures that the chat window is scrolled all the way up when the user visits the page AND when a new chat message is received.
 
 ### Instant Image Update
 
 Another advantage of using react's inherent re-renders on setting state is providing immediate feedback on user input.
 
-**[]() Gif here**
+![Form Update](docs/assets/Zwitch_form_update.gif)
 
-So in the channel customize form if a user enters a valid YouTube or Image link, the onChange event on the input handlers cause a render everytime the field is edited, resulting an image showing that the right video or image was attached.
+So in the channel customize form if a user enters a valid YouTube or Image link, the onChange event on the input handlers fires a re-render every time the field is edited, instantly confirming that the right image or video is attached.
 
-```
+```javaScript
 // frontend/components/channels/channel_form.jsx
 
 update(field) {
@@ -101,7 +108,7 @@ So to get around that, I used a dummy `<Route>` whose entire purpose was to scro
 
 Like so,
 
-```
+```javaScript
 const App = () => (
   <section className="zwitch">
     <Route component={ScrollToTop} />
@@ -120,7 +127,7 @@ const ScrollToTop = () => {
 
 export default App;
 ```
-While not completely obvious or even essential currently, it will certainly allow for smoother transition when the channel page gets expanded.
+While not completely obvious or even essential currently, it will certainly allow for smoother transition between pages when the channels gets expanded.
 
 ## Future Plans
 
