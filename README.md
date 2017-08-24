@@ -1,8 +1,8 @@
-# Zwitch.tv
-
 ![Zwitch Logo](docs/ZwitchLogo.png)
 
 [Check out the Live APP!](zwitch.tv)
+
+# Zwitch.tv
 
 <!-- ![Landing Page](docs/assets/Landing_page.png) -->
 
@@ -92,7 +92,7 @@ Another advantage of using react's inherent re-renders on setting state is provi
   <img src='docs/assets/Zwitch_form_update.gif' />
 </p>
 
-So in the channel customize form if a user enters a valid YouTube or Image link, the onChange event on the input handlers fires a re-render every time the field is edited, instantly confirming that the right image or video is attached.
+So in the channel customize form if a user enters a valid YouTube or Image link, the onChange event on the input handlers fires a re-render every time the field is edited, instantly confirming that the right image or video was attached.
 
 ```javaScript
 // frontend/components/channels/channel_form.jsx
@@ -104,7 +104,7 @@ update(field) {
 }
 ```
 
-### Super cool hidden feature
+### Super Cool Hidden Feature
 
 React router by default does not scroll up the window when routing to a different _page_, even though this feature has been requested for a [while](https://github.com/ReactTraining/react-router/issues/2019) [now](https://stackoverflow.com/questions/36904185/react-router-scroll-to-top-on-every-transition/36906825).
 
