@@ -151,6 +151,46 @@ virginia = User.create!(
           password: "beststate"
 )
 
+naum = User.create!(
+          username: "Naum31",
+          password: "numlet"
+)
+
+zpants = User.create!(
+          username: "Z Pants",
+          password: "pantsareus"
+)
+
+ChatMessage.create!(
+          chatroom_id: inside.id,
+          user_id: zpants.id,
+          body: "Hello there!"
+)
+
+ChatMessage.create!(
+          chatroom_id: inside.id,
+          user_id: zpants.id,
+          body: "What do you think of live chat"
+)
+
+ChatMessage.create!(
+          chatroom_id: inside.id,
+          user_id: naum.id,
+          body: "Its pretty cool"
+)
+
+ChatMessage.create!(
+          chatroom_id: inside.id,
+          user_id: naum.id,
+          body: "When are we getting emotes"
+)
+
+ChatMessage.create!(
+          chatroom_id: inside.id,
+          user_id: zpants.id,
+          body: "SoonTM"
+)
+
 ChatMessage.create!(
           chatroom_id: batman.id,
           user_id: dallas.id,
