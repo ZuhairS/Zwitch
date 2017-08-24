@@ -4,7 +4,11 @@
 
 [Check out the Live APP!](zwitch.tv)
 
-![Landing Page](docs/assets/Landing_page.png)
+<!-- ![Landing Page](docs/assets/Landing_page.png) -->
+
+<p align="center">
+  <img src='docs/assets/Landing_page.png' />
+</p>
 
 A full-stack web application inspired by Twitch, a popular live video platform streaming, Zwitch serves as a social platform where you can stream notable video game oriented videos while interacting with other viewers in realtime.
 
@@ -18,7 +22,10 @@ Built using React/Redux framework for the frontend and Rails 5 for the backend, 
 
 While I initially planned only for basic refresh based chats, with a bit of help from Rails Action Cable documentation and guidance from a fellow engineer, I seamlessly integrated WebSockets into my app and implemented live chat. Since Rails Action Cable is full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework, it allows using standard rails and react styles and form to implement real time chat.
 
-![Live Chat](docs/assets/Zwitch_chat.gif)
+<!-- ![Live Chat](docs/assets/Zwitch_chat.gif) -->
+<p align="center">
+  <img src='docs/assets/Zwitch_chat.gif' />
+</p>
 
 Rails Action Cable essentially works by creating cable channels that different consumers(instances of user) can subscribe to. Each channel can then have zero or more broadcastings where every consumer subscribed to the channel receives the updated transmissions.
 
@@ -80,7 +87,10 @@ componentWillUnmount() {
 
 Another advantage of using react's inherent re-renders on setting state is providing immediate feedback on user input.
 
-![Form Update](docs/assets/Zwitch_form_update.gif)
+<!-- ![Form Update](docs/assets/Zwitch_form_update.gif) -->
+<p align="center">
+  <img src='docs/assets/Zwitch_form_update.gif' />
+</p>
 
 So in the channel customize form if a user enters a valid YouTube or Image link, the onChange event on the input handlers fires a re-render every time the field is edited, instantly confirming that the right image or video is attached.
 
