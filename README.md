@@ -4,7 +4,7 @@
 
 [Check out the Live APP!](zwitch.tv)
 
-![Landing Page](docs/assets/Zwitch_landing.gif)
+![Landing Page](docs/assets/Landing_page.png)
 
 A full-stack web application inspired by Twitch, a popular live video platform streaming, Zwitch serves as a social platform where you can stream notable video game oriented videos while interacting with other viewers in realtime.
 
