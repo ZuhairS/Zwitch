@@ -51,6 +51,15 @@
   }
 }
 
+.mid-nav {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 0 10px;
+  }
+}
+
 .right-nav {
   display: flex;
   align-items: center;

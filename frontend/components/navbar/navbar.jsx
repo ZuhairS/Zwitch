@@ -47,6 +47,15 @@ const Navbar = ({ currentUser, logout }) => {
         </NavLink>
       </nav>
 
+      <nav className="mid-nav">
+        <a href="https://github.com/ZuhairS" target="_blank">
+          <FontAwesome name='github' size='2x' id='github'/>
+        </a>
+        <a href="https://www.linkedin.com/in/zuhairshaikh/" target="_blank">
+          <FontAwesome name='linkedin' size='2x' id='linkedin'/>
+        </a>
+      </nav>
+
       <nav className="right-nav">
         { loggedRender }
       </nav>
