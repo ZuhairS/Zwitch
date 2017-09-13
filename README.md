@@ -22,16 +22,18 @@ Built using React/Redux framework for the frontend and Rails 5 for the backend, 
 
 ### Live Chat
 
-While I initially planned only for basic refresh based chats, with a bit of help from Rails Action Cable documentation and guidance from a fellow engineer, I seamlessly integrated WebSockets into my app and implemented live chat. Since Rails Action Cable is full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework, it allows using standard rails and react styles and form to implement real time chat.
+While I initially planned only for basic refresh based chats, with a bit of help from Rails Action Cable documentation and guidance from a fellow engineer, I seamlessly integrated WebSockets into my app and implemented live chat. Since Rails Action Cable is a full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework, it allows using standard rails and react styles to implement real time chat.
+
 
 <!-- ![Live Chat](docs/assets/Zwitch_chat.gif) -->
 <p align="center">
   <img src='docs/assets/Zwitch_chat.gif' />
 </p>
 
-Rails Action Cable essentially works by creating cable channels that different consumers(instances of user) can subscribe to. Each channel can then have zero or more broadcastings where every consumer subscribed to the channel receives the updated transmissions.
 
-For example in the `ChatMessagesController`, in the non-ActionCable rendition of chat the created `ChatMessage` would be sent to the frontend as a JSON. it is now the `ActionCable` that directs the relevant message attributes to all of its subscribers.
+Rails Action Cable essentially works by creating cable channels that different consumers (instances of user) can subscribe to. Each channel can then have zero or more broadcastings where every consumer subscribed to the channel receives the updated transmissions.
+
+For example, originally in the `ChatMessagesController` the  `ChatMessage` would be sent to the frontend as a JSON through an API request. It is now the `ActionCable` that directs the relevant message attributes to all of its subscribers, as shown below.
 
 ```ruby
 # app/controllers/api/chat_messages_controller.rb
@@ -51,7 +53,7 @@ class Api::ChatMessagesController < ApplicationController
         username: @chat_message.user.username,
         channel_id: @chat_message.chatroom.channel.id
 
-      # render "api/chat_messages/show"
+      # render "api/chat_messages/show" <-- Old rendition
 
 ```
 
