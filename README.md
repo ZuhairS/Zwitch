@@ -2,7 +2,7 @@
 
 <a href='http://www.zwitch.tv/'><img src='docs/assets/ZwitchLogo2.png' /></a>
 
-[Check out the Live APP!](zwitch.tv)
+[Check out the Live APP!](http://www.zwitch.tv/)
 
 # Zwitch.tv
 
